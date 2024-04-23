@@ -1,0 +1,89 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+body {
+    color: #1C1C28;
+    background-color: white !important;
+}
+
+:root {
+  color: #1C1C28;
+    --blue: #6440fe;
+    --blue-light: #9880FE;
+   --input-border: #C7C9D9;
+   --light-white: #F2F2F5;
+   --text-light: #8F90A6;
+   --text-dark:#1C1C28;
+   --light-grey: #F2F2F5;
+   --green: #05A660;
+   --red: #E53535;
+   --white: #ffffff;
+
+  }
+@mixin f-33{
+    font-size: 33px;
+    font-weight: bold;
+};
+@mixin f-23 {
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 29.95px;
+}
+@mixin f-14 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+}
+@mixin f-15 {
+  font-size: 15px;
+  line-height: 22.5px;
+}
+
+@mixin f-13{
+  font-size: 13px;
+  line-height: 17px;
+};
+
+@mixin f-19{
+  font-size: 19px;
+  line-height: 24.75px;
+  font-weight: bold;
+}
+@mixin f-10 {
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 16px;
+}
+@mixin f-16 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+@mixin f-12 {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: bold;
+}

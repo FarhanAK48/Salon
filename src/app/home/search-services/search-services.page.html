@@ -1,0 +1,42 @@
+
+
+<ion-content class="content" >
+  <div class="basic">
+    <ion-item class=" item" lines="none">
+      <ion-img src="/assets/icon/mappin.svg"></ion-img>
+      <div id="open-modal" class="title">Munich Center</div>
+      <ion-img src="/assets/icon/down-arrow.svg"></ion-img>
+      <ion-img slot="end" src="/assets/icon/cross.svg"></ion-img>      
+    </ion-item>
+
+    <ion-item class="item " lines="none">
+      <ion-input class="input" labelPlacement="stacked" [clearInput]="true" placeholder="Shop name or Service">
+        <ion-img slot="start" class="input-icon" src="/assets/icon/search-blue.svg"></ion-img>
+      </ion-input>
+    </ion-item>
+
+    <ng-container *ngFor="let item of types">
+      <ion-item class="item search-results" lines="none">
+        <ion-img src="/assets/images/haircut-56.png"></ion-img>
+        <div id="open-modal" class="total-results">
+          <p class="title">{{item.title}}</p>
+          <p class="strength">{{item.total}}</p>
+        </div>           
+      </ion-item>  
+      <hr class="custom-line">
+    </ng-container>
+
+    <ng-container *ngFor="let item of resultList">
+      <ion-item class="item results-list" lines="none">
+        <ion-img src="/assets/images/haircut-56.png"></ion-img>
+        <div id="open-modal" class="results">
+          <p class="type">{{item.title}}</p>
+          <p class="name">{{item.name}}</p>
+          <p class="address">{{item.address}}</p>
+        </div>           
+      </ion-item>  
+      <hr class="custom-line">
+    </ng-container>
+   
+  </div>
+</ion-content>

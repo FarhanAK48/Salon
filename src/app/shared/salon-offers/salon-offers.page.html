@@ -1,0 +1,72 @@
+<div class="content">
+  <div class="recomend">
+    <h3 class="heading">Recommended(5)</h3>
+    <ng-container *ngFor="let item of recList; let i=index">
+      <div class="rec-list">
+        <div class="left-side">
+          <div class="image">
+            <img class="img" src="{{item.img}}" alt="">
+          </div>
+          <ion-label class="label">
+            <h1 class="h-text">{{item.title}}</h1>
+            <p class="text">${{item.price}}</p>
+            <div class="time">
+
+              <ion-icon class="time-icon" name="time-outline"></ion-icon>
+              <p class="minute">{{item.time}} Mins</p>
+            </div>
+          </ion-label>
+        </div>
+        <div class="right-side">
+          <p class="select-btn">Select </p>
+          <ion-icon class="add-icon" name="add"></ion-icon>
+        </div>
+      </div>
+      <hr *ngIf="i < recList.length - 1" class="custom-hr">
+
+    </ng-container>
+
+  </div>
+
+
+  <div class="packages">
+    <h3 class="heading">Packages</h3>
+    <ng-container *ngFor="let item of packageList; let i=index">
+      <div class="rec-list">
+        <div class="left-side">
+          <div class="image">
+            <img class="img" src="{{item.img}}" alt="">
+          </div>
+          <ion-label class="label">
+            <h1 class="h-text">{{item.title}}</h1>
+            <p class="text">${{item.price}}</p>
+            <div class="time">
+              <ion-icon class="time-icon" name="time-outline"></ion-icon>
+              <p class="minute">{{item.time}} Mins</p>
+            </div>
+          </ion-label>
+        </div>
+        <div class="right-side">
+          <p class="select-btn">Select </p>
+          <ion-icon class="add-icon" name="add"></ion-icon>
+        </div>
+      </div>
+      <hr *ngIf="i < packageList.length - 1" class="custom-hr">
+
+    </ng-container>
+
+  </div>
+
+  <div class="cart-button" routerLink="/checkout">
+    <app-cart-button ></app-cart-button>
+    <!-- <div class="left-side">
+      <div class="total-items"> 2</div>
+      <div class="amount">
+        <p class="total-amount">$345</p>
+        <p class="taxes">Plus texes</p>
+      </div>
+    </div>
+    <div class="continue">Continue</div> -->
+  </div>
+</div>
+<!-- </ion-content> -->

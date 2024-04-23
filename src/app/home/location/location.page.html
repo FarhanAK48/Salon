@@ -1,0 +1,51 @@
+<ion-content class="content" [fullscreen]="true">
+  <div class="body">
+    <ion-grid class="grid">
+      <ion-row>
+        <ion-col size="2" class="ion-text-left col">
+          <ion-img class="back-arrow" src="/assets/icon/back-arrow-black.svg"></ion-img>
+        </ion-col>
+        <ion-col size="8" class="ion-text-center col">
+          <p class="title">Address</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-right col"></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="10" class="col-1 col">
+          <ion-item lines="none" class="item items">
+            <ion-label class="label" position="stacked">Enter your Address</ion-label>
+            <input class="input" type="text" placeholder="Your Name" #placesRef="ngx-places" ngx-gp-autocomplete
+              (onAddressChange)="handleAddressChange($event)">
+          </ion-item>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center col col-2 ion-align-self-end">
+          <div class="icon">
+            <ion-img class="loc-icon" src="/assets/icon/path-location.svg"></ion-img>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="g-map">
+      <google-map #map [center]="center" [zoom]="zoom">
+        <map-marker [position]="center"></map-marker>
+        <map-circle [center]="center" [radius]="radius" />
+      </google-map>
+    </div>
+
+    <ion-item lines="none" class="header">
+      <ion-img src="/assets/icon/path-black.svg"></ion-img>
+      <p class="title">Ranchview</p>
+      <p class="change" slot="end">Change</p>
+    </ion-item>
+    <p class="address">3891  Ranchview, Dr. Richardson, California 62639</p>
+  </div>
+</ion-content>
+
+<ion-footer class="footer">
+  <ion-toolbar class="tool-bar">
+   <ion-button class="btn">Confirm Location</ion-button>
+  </ion-toolbar>
+</ion-footer>
+

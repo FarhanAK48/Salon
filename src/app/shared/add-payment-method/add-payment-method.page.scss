@@ -1,0 +1,39 @@
+@import '../../../global.scss';
+
+.content{
+    color: var(--text-dark);
+    --color: var(--text-dark);
+    position: relative;
+
+    .list{
+        .item-title{
+
+            .title{
+                margin-left: 10px;
+                @include f-19;
+                font-weight: bold;
+                
+            }
+        }
+        .custom-line{
+            height: 1px;
+            background-color: var(--input-border);
+        }
+        .item-details{
+            padding-left: 10px;
+            .title{               
+                @include f-15;
+                font-weight: bold;            
+                
+            }
+        }
+    }
+    .btn {       
+        width:91%;
+        --background: var(--blue);
+        margin: 0px 16px;
+        margin-top: 45px;
+            
+    }
+}
+

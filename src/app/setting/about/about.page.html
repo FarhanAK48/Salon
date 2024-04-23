@@ -1,0 +1,17 @@
+
+  <ion-content class="content" [fullscreen]="true">
+    <div class="body">
+      <div class="header">
+        <ion-img routerLink="/logout" class="icon" src="/assets/icon/cross.svg"></ion-img>
+        <p class="title">Your saved Addresses</p>
+      </div>
+
+      <ng-container *ngFor="let item of list">
+        <ion-item lines="none" class="list" (click)="onNavigate(item)">
+          <p slot="start" class="title">{{item.title}}</p>
+          <ion-img slot="end" class="right-icon" src="/assets/icon/right-arrow.svg"></ion-img>
+        </ion-item>
+      
+      </ng-container>
+    </div>
+  </ion-content>

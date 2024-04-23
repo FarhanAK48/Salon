@@ -1,0 +1,102 @@
+@import "../../../global.scss";
+@mixin screen-padding {
+    padding: 0px 16px !important;
+}
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .img-section {
+        position: relative;
+
+        .back-arrow {
+            position: absolute;
+            top: 50px;
+            left: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .over-img {
+            background-color: transparent;
+            position: absolute;
+            top: 50px;
+            left: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            --ion-background-color: transparent;
+            display: flex;
+            align-items: center;
+
+            .title-section {
+                position: absolute;
+                left: 16px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .text {
+                margin: 0px 10px;
+                color: white;
+            }
+        }
+
+        .title{
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 46px;
+            line-height: 59.89px;
+            // font-weight: bold;
+            margin: 0px;
+        }
+    }
+    .body {
+        @include screen-padding;
+        .total-services {
+            .title {
+                @include f-15;
+            }
+
+            .card {
+                .card-header {
+                    -webkit-padding-start: 0px;
+                    -webkit-padding-end: 0px;
+                    padding-bottom: 0px;
+                    .title {
+                        @include f-19;
+                        margin-left: 0px;
+                    }
+                    .subtitle {
+                        @include f-10;
+                    }
+                }
+                .card-content {
+                    -webkit-padding-start: 0px;
+                    -webkit-padding-end: 0px;
+                    .detail {
+                        color: var(--text-light);
+                        display: flex;
+                        align-items: center;
+
+                        .text,
+                        .km {
+                            @include f-13;
+                            margin: 0px;
+                        }
+                        .dot {
+                            margin: 0px 5px;
+                            height: 4px;
+                            width: 4px;
+                            border-radius: 50%;
+                            background-color: var(--text-light);
+                        }
+                        .rating-value {
+                            @include f-12;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

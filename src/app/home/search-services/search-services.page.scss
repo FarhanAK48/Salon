@@ -1,0 +1,79 @@
+@import "../../../global.scss";
+
+@mixin screen-padding {
+    padding: 0px 16px !important;
+}
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .basic {
+        @include screen-padding;
+        margin-top: 30px;
+
+        .item {
+            --padding-start: 0px !important;
+            --padding-end: 0px !important;
+            --inner-padding-end: 0;
+        }
+        .title {
+            @include f-16;
+            margin: 0px 8px;
+        }
+
+        .input{
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            --padding-top:  8px;
+            --padding-bottom:  8px;
+            --padding-start:  16px;
+            --padding-end:  16px;
+            margin: 10px 0px;
+        }
+
+        .search-results{
+            margin: 10px 0px;
+            .total-results{
+                margin-left: 10px;
+                .title{
+                    @include f-15;
+                    margin: 0px;
+                }
+                .strength{
+                    margin: 0px;
+                    @include f-10;
+                    font-weight: bold;
+                    color: var(--text-light);
+                }
+            }
+
+        }
+        .custom-line{
+            height: 1px;
+            background-color: var(--input-border);
+        }
+
+        .results-list{
+            .results{
+                margin-left: 10px;
+                .type{
+                    @include f-10;
+                    margin: 0px;
+                    font-weight: bold;
+                    color: var(--text-light);
+
+                }
+                .name{
+                    margin: 0px;
+                    @include f-15;
+                    font-weight: bold
+                }
+                .address{
+                    @include f-10;
+                    margin: 0px;
+                    color: var(--text-light);
+
+                }
+            }
+        }
+    }
+}

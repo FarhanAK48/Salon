@@ -1,0 +1,41 @@
+@import "../../../global.scss";
+
+@mixin f-15 {
+    font-size: 15px;
+    line-height: 22.5px;
+}
+.content{
+    .body{
+        padding: 5px 15px !important;
+      
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            color: var(--blue);
+            // margin: 10px 5px !important;
+    
+    
+            .title {
+                @include f-15;
+                font-weight: bold;
+            }
+            .quantity {
+                @include f-15;
+                font-weight: bold;
+            }
+        }
+    
+        .pop-detail {
+            display: flex;
+            justify-content: space-between;
+    
+            .item-name {
+                @include f-15;
+            }
+            .item-val{
+                @include f-15;
+            }
+        }
+
+    }
+}

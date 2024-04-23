@@ -1,0 +1,73 @@
+
+
+<ion-content class="content">
+  <div class="header">
+    <ion-item class="item back-arrow" lines="none">
+      <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+    </ion-item>
+    <div id="open-modal" class="title">Offers & Promo Codes</div> 
+    <div class="appointment-subtitle">Select Date & Time for the appointment</div> 
+
+    <div class="date-section">
+      <div class="Service-dates">When would you like your service?</div> 
+      <ion-grid class="grid">
+        <ion-row class="row">
+          <ion-col class="day-date" size="2">
+            <p class="text day">Sat</p>
+            <p class="text date">19</p>
+          </ion-col>
+          <ion-col class="day-date" size="2">
+            <p class="text day">Sun</p>
+            <p class="text date">20</p>
+          </ion-col>
+          <ion-col class="day-date" size="2">
+            <p class="text day">Mon</p>
+            <p class="text date">21</p>
+          </ion-col>
+          <ion-col class="day-date" size="2">
+            <p class="text day">Tue</p>
+            <p class="text date">22</p>
+          </ion-col>
+          <ion-col class="day-date" size="2">
+            <p class="text day">Wed</p>
+            <p class="text date">23</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="time-section">
+      <div class="service-time">When would you like your service?</div> 
+      <ion-grid class="grid">
+        <ng-container *ngFor="let item of serviceTime">
+          <ion-row class="row">
+            <ion-col  class="column day-date" size="5">
+              <p class="text day">{{item.hour}}</p>           
+            </ion-col>
+            <ion-col class="column day-date" size="5">
+              <p class="text day">{{item.min}}</p>          
+            </ion-col>        
+          </ion-row>
+
+        </ng-container>
+      
+      </ion-grid>
+    </div>
+
+    <div class="payment">
+      <ion-item class="item" lines="none">
+        <ion-img slot="start" src="./assets/icon/visa.svg"></ion-img>
+        <p class="payment-id">4153 xxxx xxxxx 0981</p>
+        <ion-icon class="icon" slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+    </div>
+    <app-cart-button></app-cart-button>
+
+  </div>
+
+  <ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5,0.75, 1]">
+    <ng-template>
+      <app-payment-methods type="checkout"></app-payment-methods>
+     
+    </ng-template>
+  </ion-modal>
+</ion-content>

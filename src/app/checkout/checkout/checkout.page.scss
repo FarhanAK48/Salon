@@ -1,0 +1,217 @@
+@import "../../../global.scss";
+
+@mixin screen-padding {
+    padding: 0px 16px !important;
+}
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .basic {
+        @include screen-padding;
+
+        .back-arrow {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item {
+            --padding-start: 0px;
+            --padding-end: 0px;
+        }
+
+        .checkout {
+          @include f-23;
+        }
+        .salon-subtitle {
+            font-size: 19px;
+            font-weight: bold;
+            line-height: 24.75px;
+            margin-top: 20px;
+        }
+        .service {
+            margin-top: 8px;
+            .text {
+                margin-left: 10px;
+                @include f-15;
+                font-weight: bold;
+            }
+        }
+
+        .custom-line {
+            border: 0.25px dotted var(--input-border);
+        }
+
+        .date-time {
+            .select-date {
+                @include f-15;
+                font-weight: bold;
+                margin-left: 10px;
+            }
+            .right-arrow {
+                height: 22px;
+                width: 16px;
+            }
+        }
+
+        .service {
+            margin-top: 20px;
+            .title-price {
+                .title {
+                    margin: 0px;
+                    @include f-15;
+                    font-weight: bold;
+                }
+                .price {
+                    margin: 0px;
+                    @include f-15;
+                }
+            }
+            .right-items {
+                .item-operation {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid var(--blue);
+                    padding: 5px 8px;
+                    border-radius: 5px;
+
+                    .number {
+                        margin: 0px;
+                        margin-left: 8px;
+                        margin-right: 8px;
+                    }
+                }
+                .price {
+                    margin: 0px;
+                    @include f-15;
+                    display: flex;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+    .line {
+        height: 8px;
+        background-color: var(--light-grey);
+        margin: 15px 0px;
+    }
+
+    .offers {
+        .offer {
+            margin-left: 10px;
+            @include f-15;
+            font-weight: bold;
+        }
+        .view-offers {
+            display: flex;
+            align-items: center;
+            color: var(--blue);
+
+            .all-offers {
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 24px;
+            }
+        }
+
+        .vector-icon{
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            
+        }
+        .code-block{
+            margin-left: 10px;
+            .code{
+                @include f-15;
+                font-weight: bold;
+            }
+            .subtitle{
+                margin: 0px;
+                @include f-10;
+            }
+        }
+
+        .remove-block{
+            display: flex;
+            flex-direction: column;
+
+            .amount{
+                margin: 0px;
+                @include f-12;
+                color: var(--green);
+
+            }
+            .remove{
+                margin: 0px;
+                @include f-12;
+                color: var(--blue);
+            }
+        }
+    }
+
+    .section-frequently{
+        @include screen-padding;
+
+        .title{
+            @include f-15;
+            font-weight: bold;
+            margin: 15px 0px;
+
+        }
+        .grid{
+
+            .btn {
+              
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 0.25px solid var(--blue);
+                padding: 8px;
+                border-radius:5px;
+                box-shadow: 0 0 10px rgba(83, 79, 79, 0.2);
+                color: var(--blue);
+                width: 80px;
+
+                .select-btn {
+                    margin: 0px;
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+                .add-icon {
+                    margin-left: 5px;                
+                    height: 16px;
+                    width: 16px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .amounts{
+        @include screen-padding;
+        .items{
+
+            .total-item{
+                @include f-15;
+            }
+            .amount{
+                @include f-15;
+                line-height: 19.5px;
+            }
+        }
+
+        .discount{
+            @include f-15;
+            line-height: 19.5px;
+
+            .amount{
+                color: var(--green);
+            }
+        }
+
+        .payables{
+            @include f-19;
+        }
+    }
+}

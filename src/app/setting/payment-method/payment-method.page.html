@@ -1,0 +1,13 @@
+
+
+<ion-content class="content" [fullscreen]="true">
+  <div class="body">
+    <app-payment-methods modelId="open-modal"></app-payment-methods>
+  </div>
+  <ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5,0.75, 1]">
+    <ng-template>
+      <app-add-payment-method ></app-add-payment-method>
+     
+    </ng-template>
+  </ion-modal>
+</ion-content>

@@ -1,0 +1,46 @@
+@import '../../../global.scss';
+
+.content{
+    color: var(--text-dark);
+    padding: 0px 16px;
+    .item {
+        --padding-start: 0px !important;
+        --padding-end: 0px !important;
+        --inner-padding-end: 0;
+    }
+
+    .header{
+        margin-top: 15px;
+        .logout{
+            @include f-19;
+        }
+    }
+    .confirmation{
+        @include f-15;
+        margin: 0px;
+        color: var(--text-light);
+    }
+
+
+    .grid{
+        --ion-grid-padding: 0px;
+        .row{
+            margin-top: 15px;
+            .col{
+                --ion-grid-column-padding: 0px;
+
+                .cancel{
+                    --padding-start: 0px;
+                    color: var(--blue) !important;                  
+                    --border-color: var(--blue);
+                   
+
+                }
+                .logout{
+                    --padding-end: 0px;
+                }
+            }
+        }
+    }
+
+}

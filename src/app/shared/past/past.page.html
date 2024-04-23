@@ -1,0 +1,36 @@
+<ion-content class="content">
+  <div class="body">
+    <ng-container *ngFor="let item of pastBooking">
+      <ion-item class="item items" lines="none">
+        <div class="left-section" slot="start">
+          <p class="title">Woodlands Hills Salon</p>
+          <div class="detail">
+            <p class="text">Kaira throughway </p>
+            <div class="dot"></div>
+            <p class="km">5.0 kms</p>
+          </div>
+          <p class="type">Haircut x 1 + Shave x 1</p>
+          <p class="date">8 Mar 2021 $102</p>
+        </div>
+        <div class="right-section" slot="end">
+          <ion-img class="fav-icon"
+            [src]="type === 'favorite' ? '../../../assets/icon/favorite-fill.svg' : '../../../assets/icon/favorite-blue.svg'"></ion-img>
+
+          <p class="fav-text">Favorites</p>
+        </div>
+      </ion-item>
+      <ion-grid class="grid">
+        <ion-row class="row">
+          <ion-col size="6" class="col col-1 ion-text-left">
+            <p *ngIf="type==='upcoming'" class="cancel-booking">Cancel Booking</p>
+          </ion-col>
+          <ion-col size="6" class="col col-2 ion-text-right">
+            <ion-button class="booking-button" fill="outline"> {{ type === 'upcoming' ? 'Reschedule Booking' : '
+              Recorder Booking' }} </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ng-container>
+  </div>
+</ion-content>

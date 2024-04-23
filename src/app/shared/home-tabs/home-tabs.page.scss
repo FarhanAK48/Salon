@@ -1,0 +1,35 @@
+@import '../../../global.scss';
+
+.body{
+    position: relative;
+
+    .chips {
+        display: flex;
+        overflow-x: auto;
+        width: auto;
+        margin: 10px 0px;
+        .chip {
+            background-color: var(--light-white);
+            flex-shrink: 0;
+            white-space: nowrap;
+            .label {
+                @include f-13;
+                margin: 0px 5px;
+            }
+        }
+        .rating-button{
+            position: absolute;
+            right: 0px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    
+            .text{
+                margin: 0px;
+            }
+        }
+    }
+}

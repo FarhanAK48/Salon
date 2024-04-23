@@ -1,0 +1,52 @@
+<ion-content class="content">
+  <div class="header">
+    <ion-item class="item back-arrow" lines="none">
+      <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+    </ion-item>
+    <div class="promo-title">Offers & Promo Codes</div>
+    <!-- <ion-item lines="none" class="item items">
+    <div class="input-container" slot="start">
+      <ion-label class="label" labelPlacement="stacked" position="stacked">Coupon Code</ion-label>
+      <ion-input class="input" type="text" placeholder="Your Placeholder">
+        <img slot="end" src="../../../assets/icon/vector.svg">
+      </ion-input>
+    </div>
+    <p class="apply" slot="end">Apply</p>
+    </ion-item> -->
+    <ion-grid class="grid">
+      <ion-row class="row">
+        <ion-col class="col-1" size="10">        
+          <div class="input-container" >
+            <ion-label class="label" labelPlacement="stacked" position="stacked">Coupon Code</ion-label>
+            <div class="input">
+              <ion-input type="text" placeholder="Your Placeholder">
+              </ion-input>
+              <img slot="end" src="../../../assets/icon/vector.svg">
+            </div>
+            <div class="hint-text">
+              <img class="vector-icon" slot="end" src="../../../assets/icon/vector.svg">
+              <p class="text">Coupon Code is Valid. You will get 10% off on total</p>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="col-2" size="2" (click)="onNavigate()">
+          <p class="apply">Apply</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="line"></div>
+
+  <div class="offers">
+    <ng-container *ngFor="let item of visaArr">
+      <ion-item class="item items" lines="none">
+        <ion-img slot="start" src="{{item.img}}"></ion-img>
+        <div class="list-items">
+          <p class="cashback">{{item.cashback}}</p>
+          <p class="booking">On booking of $200 or more.</p>
+        </div>
+        <p class="apply" slot="end">Apply</p>
+      </ion-item>
+    </ng-container>
+  </div>
+</ion-content>

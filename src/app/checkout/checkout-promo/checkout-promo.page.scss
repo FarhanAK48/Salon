@@ -1,0 +1,136 @@
+@import "../../../global.scss";
+
+@mixin screen-padding {
+    padding: 0px 16px !important;
+}
+
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+
+    .item {
+        --padding-start: 0px !important;
+        --padding-end: 0px !important;
+    }
+    .header {
+        @include screen-padding;
+
+        .back-arrow {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .promo-title {
+            @include f-23;
+        }
+
+        .grid {
+            padding: 0px;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // margin: 30px 0px;
+            // flex: 0;
+            .row{
+                padding: 0px;
+                .col-1{
+                    padding: 0px;
+
+                    .input-container {
+                        // flex-grow: 1;
+                        .label {
+                            padding-left: 8px;
+                            font-size: 10px;
+                            line-height: 16px;
+                        }
+                        .input {
+                            display: flex;
+                            padding: 0px 5px;
+                            border: 1px solid var(--input-border);
+                            border-radius: 10px !important;
+                            --height: 50px !important;
+                            --padding-start: 5px;
+                            --padding-top: 15px;
+                            --padding-bottom: 15px;
+
+                        }
+                        .hint-text{
+                            display: flex;
+                            align-items: center;
+                            margin-left: 8px;
+
+                            .vector-icon{
+                                height: 16px;
+                                width: 16px;
+                            }
+                            .text{
+                                margin: 0px 5px;
+                                @include f-10;
+                            }
+                        }
+                    }
+                }
+
+                .col-2{
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    padding: 0px;
+                    .apply {
+                        margin: 0;
+                        padding: 0;
+                        font-size: 12px;
+                        line-height: 24px;
+                        font-weight: bold;
+                        color: var(--blue);
+                        --padding-right: 0px !important;
+                        padding-right: 0px !important;
+                        --inner-padding-end: 0px !important;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        height: 8px;
+        background-color: var(--light-grey);
+        margin: 15px 0px;
+    }
+
+    .offers {
+        @include screen-padding;
+        .items {
+            margin: 35px 0px;
+            .list-items {
+                padding: 0px 10px;
+                .cashback {
+                    @include f-13;
+                    margin: 0px;
+                }
+                .booking {
+                    margin: 0px;
+                    font-size: 10px;
+                    line-height: 16px;
+                    color: var(--text-light);
+                }
+            }
+            .apply {
+                font-size: 12px;
+                line-height: 24px;
+                font-weight: bold;
+                color: var(--blue-light);
+            }
+        }
+    }
+}
+
+ion-item {
+    --inner-padding-end: 0;
+}
+
+.item-native .item-inner {
+    flex: none !important;
+}

@@ -1,0 +1,49 @@
+@import '../../../global.scss';
+
+.cart-button{
+    background-color: var(--blue);
+    color: white;
+    height: 56px;
+    margin: 0px 15px;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed !important;
+    bottom: 5%;
+    left: 0%;
+    width: 92%;
+
+    .left-side{
+        display: flex;
+        align-items: center;
+
+        .total-items{
+        @include f-16;
+            height: 32px;
+            width: 32px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+
+        }
+        .amount{
+            margin-left: 10px;
+            .total-amount{
+                margin: 0px;
+                @include f-16;
+            }
+            .taxes{
+                margin: 0px; 
+                font-size: 10px;
+                line-height: 16px; 
+            }
+        }
+        .continue{
+            @include f-16;
+        }
+    }
+}

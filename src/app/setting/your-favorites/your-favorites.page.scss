@@ -1,0 +1,137 @@
+@import '../../../global.scss';
+
+@mixin padding{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .body {
+        padding: 0px 16px;
+        padding-top: 30px;
+        position: relative;
+
+        height: 100%;
+
+        .item {
+            --padding-start: 0px !important;
+            --padding-end: 0px !important;
+            --inner-padding-end: 0;
+        }
+
+        .header{
+
+            .icon{
+                height: 24px;
+                width: 24px;
+            }
+
+            .title{
+                @include f-23;
+                margin: 10px 0px;
+            }
+        }
+
+        .items {
+            margin-top: 15px;
+            .left-section {
+                .title {
+                    @include f-15;
+                    font-weight: bold;
+                    margin: 0px;
+                }
+
+                .detail {
+                    color: var(--text-light);
+                    display: flex;
+                    align-items: center;
+
+                    .text,
+                    .km {
+                        @include f-13;
+                        font-weight: normal;
+                        margin: 0px;
+                    }
+                    .dot {
+                        margin: 0px 5px;
+                        height: 4px;
+                        width: 4px;
+                        border-radius: 50%;
+                        background-color: var(--text-light);
+                    }
+                }
+
+                .type,
+                .date {
+                    color: var(--text-light);
+                    @include f-13;
+                    font-weight: normal;
+                    margin: 0px;
+                }
+            }
+
+            .right-section {
+                color: var(--blue);
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                .fav-icon {
+                    height: 24px;
+                    width: 24px;
+                }
+                .fav-text {
+                    @include f-10;
+                    font-weight: bold;
+                    margin: 0px;
+                }
+                .fav-icon {
+                    color: var(--blue) !important;
+                }
+            }
+        }
+
+        .btn{
+            display: flex;
+            justify-content: end;
+            margin-top: 5px;
+            .booking-button {
+                --border-color: var(--blue);
+                --color: var(--blue);
+               --padding-start: 16px;
+               --padding-top: 4px;
+               --padding-end: 16px;
+               --padding-bottom: 4px;
+                
+            }
+
+        }
+        // .grid {
+        //     margin-top: 15px;
+        //     margin-bottom:70px;
+        //     --ion-grid-padding: 0px;
+        //     .row {
+        //         .col {
+        //             --ion-grid-column-padding: 0px;
+
+        //             .cancel-booking {
+        //                 @include f-12;
+        //                 color: var(--red);
+        //                 margin: 0px;
+        //             }
+        //             .booking-button {
+        //                 // display: flex;
+        //                 // justify-content: end;
+        //                 --border-color: var(--blue);
+        //                 --color: var(--blue);
+        //             }
+        //         }
+        //         .col-1{
+        //             display: flex;
+        //             align-items: center;
+        //         }
+        //     }
+        // }
+    }
+}

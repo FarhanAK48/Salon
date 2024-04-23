@@ -1,0 +1,26 @@
+
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">homeTabs</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+<div class="body">
+
+  <div class="chips">
+    <ng-container *ngFor="let item of chips">
+      <ion-chip class="chip">
+        <ion-img class="icon" [src]="item.start"></ion-img>
+        <ion-label class="label">{{item.label}}</ion-label>
+        <ion-img class="icon" [src]="item.end"></ion-img>
+      </ion-chip>
+    </ng-container>
+    <div class="rating-button">
+      <ion-img src="../../../assets/icon/up-down-arrow.svg"></ion-img>
+      <p class="text">Rating</p>
+      <ion-img src="../../../assets/icon/up-arrow.svg"></ion-img>
+    </div>
+  </div>
+</div>

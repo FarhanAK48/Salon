@@ -1,0 +1,44 @@
+@import '../../../global.scss';
+
+@mixin padding{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .body {
+        padding: 0px 16px;
+        padding-top: 30px;
+        position: relative;
+
+        height: 100%;
+
+        .item {
+            --padding-start: 0px !important;
+            --padding-end: 0px !important;
+            --inner-padding-end: 0;
+        }
+
+        .header{
+
+            .icon{
+                height: 24px;
+                width: 24px;
+            }
+
+            .title{
+                @include f-23;
+                margin: 10px 0px;
+            }
+        }
+
+        .list{
+            margin: 15px 0px;
+            .title{
+                @include f-15;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+
+
+<div class="content">
+  <div class="chips-block">
+    <ng-container *ngFor="let item of chips">
+      <div class="chips">
+        <p class="text">{{item.name}}</p>
+      </div>
+
+    </ng-container>
+    <div (click)="presentPopover($event)" class="menu-btn">
+      <ion-icon class="menu" name="menu"></ion-icon>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+@import '../../../global.scss';
+
+@mixin padding {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.body {
+    position: relative;
+
+    .item-header {
+        margin: 20px 0px !important;
+        .ionic-label {
+            margin-top: 30px !important;
+
+            .icon{
+                height: 24px;
+                width: 24px;
+            }
+            .title {
+                font-size: 23px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .form {
+        margin-top: 20px !important;
+
+        .otp-fields {
+            display: flex;
+            @include padding;
+            .input {
+                border: 1px solid var(--input-border);
+                border-radius: 10px !important;
+                --height: 50px !important;
+                padding: 2px 18px !important;
+                margin-right: 10px;
+                width: 50px;
+                font-size: 15px !important;
+            }
+        }
+        .code-confirmation {
+            font-size: 15px;
+            margin-top: 30px;
+            @include padding;
+
+            .resend {
+                color: var(--blue);
+            }
+        }
+        .btn {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            margin-top: 20px;
+            @include padding;
+
+            ion-button {
+                width: 100%;
+                --background: var(--blue);
+            }
+        }
+    }
+}

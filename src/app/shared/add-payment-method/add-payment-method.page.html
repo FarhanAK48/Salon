@@ -1,0 +1,22 @@
+
+
+<ion-content class="content" [fullscreen]="true">
+  <ion-list class="list">
+         <ion-item class="item item-title" lines="none">
+           <ion-img src="../../../assets/icon/cross.svg"></ion-img>
+           <p class="title">Add Payment Method</p>
+         </ion-item>
+         <hr class="custom-line">
+         <ng-container *ngFor="let item of paymentMethods">
+           <ion-item class="item item-details" lines="none">
+             <ion-img slot="start" src="{{item.img}}"></ion-img>
+             <p class="title">{{item.title}}</p>
+             <ion-img *ngIf="item?.icon" slot="end" src="{{item?.icon}}"></ion-img>
+           </ion-item>
+         </ng-container>
+      
+       </ion-list>
+       <ion-button class="add-button btn" routerLink="/men-shop">Show 32 results</ion-button>
+
+ </ion-content>
+ 

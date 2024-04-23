@@ -1,0 +1,72 @@
+@import "../../../global.scss";
+
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .body {
+        .item {
+            --padding-start: 0px !important;
+            --padding-end: 0px !important;
+            --inner-padding-end: 0;
+        }
+
+        .custom-line {
+            height: 1px;
+            background-color: var(--input-border);
+            margin: 0px;
+        }
+
+        .title-section {
+            margin: 0px 20px;
+
+            .title {
+                @include f-19;
+                margin-left: 10px;
+            }
+            .clear {
+                @include f-12;
+                color: var(--blue);
+            }
+        }
+
+        .grid {
+            height: 100%;
+            .row {
+                .col {
+                    // background-color: red;
+                }
+                .left-col {
+                    --padding-top: 0px;
+                    padding-top: 0px;
+                    -webkit-padding-start: 0px;
+                    -webkit-padding-end: 0px;
+                    background-color: var(--light-white);
+                    height: 900px;
+
+                    .p{
+                        margin: 0px;
+                        padding: 20px 10px;
+                        @include f-12;
+                    }
+
+                    .selected{
+                        background-color: var(--white);
+                    }
+                }
+
+                .right-col{
+                    padding-left: 15px;
+
+                    .selected-sort{
+                        color: var(--blue);
+                        font-weight: bold;
+                    }
+                    .text{
+                        margin-left: 5px;
+                        @include f-15;
+                    }
+                }
+            }
+        }
+    }
+}

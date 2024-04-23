@@ -1,0 +1,40 @@
+
+
+<ion-content class="content" [fullscreen]="true">
+<div class="body">  
+    <div class="header">
+      <ion-avatar slot="start" class="profile">
+        <ion-img class="img" src="/assets/images/pro-img.jpg"></ion-img>
+      </ion-avatar>
+      <div class="right-section">
+        <div class="name-section">
+          <p class="name p">John Doe</p>
+          <div class="edit">
+            <p class="text p">Edit</p>
+            <ion-img src="/assets/icon/right-arrow.svg"></ion-img>  
+          </div>
+        </div>
+        <div class="address">
+          <p class="p number">+923471701646</p>
+          <div class="dot"></div>
+          <p class="p mail">mfarhanakhtar.gmail.com</p>
+        </div>
+      </div>
+    </div> 
+
+    <ng-container *ngFor="let item of list">    
+      <ion-item class="item list" lines="none" (click)=" onNavigate(item)">
+        <div slot="start" class="left-section">
+          <ion-img class="icon" [src]="item.icon"></ion-img>
+          <div class="title-section">
+            <p [ngClass]="{'logout': item.title === 'Logout'}" class="title">{{item.title}}</p>
+            <p class="desc">{{item.subTitle}}</p>
+          </div>
+        </div>
+        <ion-img *ngIf="item.title === 'Logout'" slot="end" src="/assets/icon/right-arrow-red.svg"></ion-img>
+        <ion-img *ngIf="item.title !== 'Logout'" slot="end" src="/assets/icon/right-arrow.svg"></ion-img>
+      </ion-item>
+    </ng-container>
+
+</div>
+</ion-content>

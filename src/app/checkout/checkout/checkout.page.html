@@ -1,0 +1,123 @@
+<ion-content class="content" [fullscreen]="true">
+  <div class="basic">
+    <ion-item class=" item back-arrow" lines="none">
+      <ion-icon slot="start" name="arrow-back-outline" routerLink="/men-shop"></ion-icon>
+    </ion-item>
+    <div id="open-modal" class="checkout">Checkout</div>
+    <div class="salon-subtitle">Woodlands Hills Salon</div>
+    <ion-item class="item service" lines="none">
+      <!-- <ion-icon slot="start" name="arrow-back-outline"></ion-icon> -->
+      <ion-img src="../../../assets/icon/shop.svg"></ion-img>
+      <ion-label class="text">Shop Service</ion-label>
+    </ion-item>
+    <hr class="custom-line">
+    <ion-item class="item date-time" lines="none">
+      <ion-img class="date-icon" src="../../../assets/icon/calander.svg"></ion-img>
+      <ion-label class="select-date">Select Date & Time</ion-label>
+      <ion-icon class="right-arrow" slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <hr class="custom-line">
+    <ng-container *ngFor="let item of services">
+      <ion-item class="item service" lines="none">
+        <div class="title-price" slot="start">
+          <p class="title">{{item.title}}</p>
+          <p class="price">${{item.amount}}</p>
+        </div>
+        <div class="right-items" slot="end">
+          <div class="item-operation">
+            <ion-icon name="remove-outline"></ion-icon>
+            <p class="number">1</p>
+            <ion-icon name="add-outline"></ion-icon>
+          </div>
+          <p class="price">${{item.charges}}</p>
+        </div>
+      </ion-item>
+
+    </ng-container>
+
+
+  </div>
+  <div class="line"></div>
+
+  <ion-item class="item offers" lines="none" routerLink="/checkout-promo">
+    <ion-img class="percentage-icon" src="../../../assets/icon/percent-outline.svg"></ion-img>
+    <ion-label class="offer">Offers & Promo Code</ion-label>
+    <div class="view-offers">
+      <p class="all-offers">View Offers</p>
+      <ion-icon class="forword-icon" slot="end" name="chevron-forward-outline"></ion-icon>
+    </div>
+  </ion-item>
+
+  <ion-item class="item offers" lines="none">
+    <ion-img slot="start" class="vector-icon" src="../../../assets/icon/vector.svg"></ion-img>
+    <div class="code-block">
+      <ion-label class="code">Code FREE10 Applied!</ion-label>
+      <p class="subtitle">Coupon Applied Successfully</p>
+    </div>
+    <div slot="end" class="remove-block">
+      <p class="amount">-$40</p>
+      <p class="remove">Remove</p>
+    </div>
+  </ion-item>
+
+  <div class="line"></div>
+  <div class="section-frequently">
+    <p class="title">Frequently added together</p>
+
+    <ion-grid class="grid">
+      <ion-row>
+        <ion-col size="4">
+          <ion-img src="../../../assets/images/haircut.png"></ion-img>
+          <ion-text>Haircut</ion-text>
+          <div class="btn">
+            <p class="select-btn">Select </p>
+            <ion-icon class="add-icon" name="add"></ion-icon>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <ion-img src="../../../assets/images/haircut.png"></ion-img>
+          <ion-text>Haircut</ion-text>
+          <div class="btn">
+            <p class="select-btn">Select </p>
+            <ion-icon class="add-icon" name="add"></ion-icon>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <ion-img src="../../../assets/images/haircut.png"></ion-img>
+          <ion-text>Haircut</ion-text>
+          <div class="btn">
+            <p class="select-btn">Select </p>
+            <ion-icon class="add-icon" name="add"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <div class="line"></div>
+  <div class="amounts">
+    <ion-item class="item items" lines="none">
+      <ion-text class="total-item" slot="start">Item total </ion-text>
+      <ion-text class="amount" slot="end">$112</ion-text>
+    </ion-item>
+
+    <ion-item class="item discount" lines="none">
+      <ion-text class="total-discount" slot="start">Coupon Discount </ion-text>
+      <ion-text class="amount" slot="end">-$10</ion-text>
+    </ion-item>
+
+    <ion-item class="item payables" lines="none">
+      <ion-text class="payable-amount" slot="start">Amount Payable</ion-text>
+      <ion-text slot="end">$325</ion-text>
+    </ion-item>
+
+  </div>
+  <ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.5, 1]">
+    <ng-template>
+      <!-- <app-payment-methods></app-payment-methods> -->
+     <app-logout-confirmation></app-logout-confirmation>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

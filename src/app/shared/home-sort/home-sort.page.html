@@ -1,0 +1,39 @@
+<ion-content class="content" [fullscreen]="true">
+  <div class="body">
+    <ion-item class="item title-section" lines="none">
+      <ion-img src="/assets/icon/cross.svg"></ion-img>
+      <p class="title">Sort/Filters</p>
+      <p class="clear" slot="end">Clear All</p>
+    </ion-item>
+    <hr class="custom-line">
+    <ion-grid class="grid">
+      <ion-row class="row">
+        <ion-col size="3" class="col left-col">
+          <ng-container *ngFor="let item of filterCategory" >
+            <p class="p" [ngClass]="{ 'selected': selectedOption === item.title }" (click)="selectOption(item)">{{item.title}}</p>
+          </ng-container>
+        </ion-col>
+
+        <ion-col size="9" class="col right-col">
+          <div *ngIf="selectedOption === 'Sort'" class="sort">
+            <ng-container *ngFor="let  item of sortOptions">
+              <ion-item lines="none" (click)="sortSelect(item)">
+                <ion-img [src]="selectedSort === item.title ? '/assets/icon/check-circle-blue.svg' : '/assets/icon/check-circle.svg'"></ion-img>
+                <p  [ngClass]="{ 'selected-sort': selectedSort === item.title }" class="text" >{{item.title}}</p>
+              </ion-item>            
+            </ng-container>
+          </div>   
+          
+          <div *ngIf="selectedOption === 'Gender'" class="gender">
+            <ng-container *ngFor="let  item of genderOptions">
+              <ion-item lines="none"  (click)="genderSelect(item)">
+                <ion-img [src]="selectedGender === item.title ? '/assets/icon/check-circle-blue.svg' : '/assets/icon/check-circle.svg'"></ion-img>
+                <p class="text">{{item.title}}</p>
+              </ion-item>            
+            </ng-container>
+          </div> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,67 @@
+@import '../../../global.scss';
+
+@mixin padding{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .body {
+        padding: 0px 16px;
+        padding-top: 30px;
+       
+     
+
+      
+
+        .header{
+
+            .icon{
+                height: 24px;
+                width: 24px;
+            }
+
+            .title{
+                @include f-23;
+                margin: 10px 0px;
+            }
+        }
+
+        .list{
+            margin-bottom: 35px;
+            display: flex;
+            .home-icon{
+                height: 24px;
+                width: 24px;
+            }
+            .right-section{
+                margin-left: 10px;
+                .p{
+                    margin: 0px;
+                }
+                .title{
+                    @include f-15;
+                    font-weight: bold;
+                }
+                .subtitle{
+                    @include f-10;
+                }
+                .btns{
+                    display: flex;
+                    color: var(--blue);
+                    margin-top: 15px;
+                    .edit{
+                        @include f-12;
+                        font-weight: bold;
+                    }
+                    .delete{
+                        margin-left: 30px;
+                        @include f-12;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

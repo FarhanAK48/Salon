@@ -1,0 +1,107 @@
+@import '../../../global.scss';
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .body {
+        padding: 0px 16px;
+        margin-top: 30px;
+        .item {
+            --padding-start: 0px !important;
+            --padding-end: 0px !important;
+            --inner-padding-end: 0;
+        }
+
+        .header{
+            display: flex;
+            align-items: center;
+          
+            .profile {
+                width: 56px;
+                height: 56px;
+                // border-radius: 50%;
+
+                .img{
+                    width: 56px;
+                    height: 56px; 
+                }
+            }
+
+            .right-section{
+                width: 100%;
+                margin-left: 10px;
+
+                .p{
+                    margin: 0px;
+                }
+                .name-section{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .name{
+                        @include f-19;
+                    }
+                    .edit{
+                        display: flex;
+                      
+                        .text{
+                            @include f-14;
+                            color: var(--blue);
+                        }
+                    }
+                }
+
+                .address{
+                    display: flex;
+                    align-items: center;
+
+                    .dot{
+                        height: 4px;
+                        width: 4px;
+                        border-radius: 50%;
+                        color: var(--text-light);
+                        background-color: var(--text-light);
+                        margin: 0px 5px;
+                        
+                    }
+                    .number, .mail{
+                        @include f-13;
+                        color: var(--text-light);
+                    }
+                }
+            }
+
+        }
+
+        .list{
+            margin: 25px 0px;
+            .left-section{
+                display: flex;
+
+                .icon{
+                    display: flex;
+                    align-items: start;
+                    height: auto;
+                }
+
+                .title-section{
+                    margin-left: 10px;
+
+                    .logout{
+                        color: var(--red);
+                    }
+                    .title{
+                        margin: 0px;
+                        @include f-15;
+                        font-weight: bold;
+                    }
+
+                    .desc{
+                        margin: 0px;
+                        @include f-10;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}

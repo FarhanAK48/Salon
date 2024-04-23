@@ -1,0 +1,98 @@
+@import "../../../global.scss";
+.content {
+    color: var(--text-dark);
+    --color: var(--text-dark);
+    --padding-bottom: 30px;
+    .body {
+        padding: 0px 16px !important;
+        .item {
+            --padding-start: 0px !important;
+            --padding-end: 0px !important;
+            --inner-padding-end: 0;
+            align-items: start;
+        }
+        .items {
+            margin-top: 15px;
+            .left-section {
+                .title {
+                    @include f-15;
+                    font-weight: bold;
+                    margin: 0px;
+                }
+
+                .detail {
+                    color: var(--text-light);
+                    display: flex;
+                    align-items: center;
+
+                    .text,
+                    .km {
+                        @include f-13;
+                        margin: 0px;
+                    }
+                    .dot {
+                        margin: 0px 5px;
+                        height: 4px;
+                        width: 4px;
+                        border-radius: 50%;
+                        background-color: var(--text-light);
+                    }
+                }
+
+                .type,
+                .date {
+                    color: var(--text-light);
+                    @include f-13;
+                    margin: 0px;
+                }
+            }
+
+            .right-section {
+                color: var(--blue);
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                .fav-icon {
+                    height: 24px;
+                    width: 24px;
+                }
+                .fav-text {
+                    @include f-10;
+                    font-weight: bold;
+                    margin: 0px;
+                }
+                .fav-icon {
+                    color: var(--blue) !important;
+                }
+            }
+        }
+
+        .grid {
+            margin-top: 15px;
+            margin-bottom:70px;
+            --ion-grid-padding: 0px;
+            .row {
+                .col {
+                    --ion-grid-column-padding: 0px;
+
+                    .cancel-booking {
+                        @include f-12;
+                        color: var(--red);
+                        margin: 0px;
+                    }
+                    .booking-button {
+                        // display: flex;
+                        // justify-content: end;
+                        --border-color: var(--blue);
+                        --color: var(--blue);
+                    }
+                }
+                .col-1{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

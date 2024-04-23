@@ -1,0 +1,186 @@
+<ion-content class="content">
+  <div *ngIf="!men" class="shop-image">
+    <ion-img src="assets/images/mensalon.png" alt=""></ion-img>
+    <div class="icons">
+      <ion-icon class="icon" name="arrow-back"></ion-icon>
+      <ion-icon class="icon" name="search"></ion-icon>
+    </div>
+    <div class="img-title">
+      <!-- <ion-item>
+        <ion-label> -->
+      <p class="para para1">{{ men ? 'FOR MEN' : 'FOR WOMEN' }}</p>
+      <p class="para para2">{{ men ?'Woodlands Hill Salon':'Style Lounge Salon'}}</p>
+      <div class="para detail">
+        <p class="text">Kaira throughway </p>
+        <div class="dot"></div>
+        <p class="km">5.0 kms</p>
+        <div class="dot"></div>
+        <p class="currency">$$</p>
+      </div>
+      <!-- </ion-label>
+      </ion-item> -->
+    </div>
+    <div class="fav">
+      <ion-img src="assets/icon/heart.png"></ion-img>
+      <p class="text">Favourite</p>
+    </div>
+  </div>
+  <div  *ngIf="!men" class="section-top">  
+    <ion-item class="ionic-items" lines="none">
+      <ion-icon slot="start" name="arrow-back-outline"></ion-icon> 
+      <ion-label class="title">Woodlands Hill Salon</ion-label>
+      <ion-icon slot="end" name="search"></ion-icon> 
+    </ion-item>
+    <div *ngIf="men" class="shop">
+      <div class="shop-detail">
+        <p class=" text heading-f19">Woodlands Hill Salon</p>
+        <p class=" text subtitle"> Haircut, Spa, Massage</p>
+        <div class="detail">
+          <p class="text">Kaira throughway </p>
+          <div class="dot"></div>
+          <p class="km">5.0 kms</p>
+          <div class="dot"></div>
+          <p class="currency">$$</p>
+        </div>
+      </div>
+      <div class="shop-rating">
+        <div class="rateing">
+          <ion-icon class="icon" name="star-outline"></ion-icon>
+          <p class="text">4.1</p>
+        </div>
+        <p class="text">5k + ratings</p>
+      </div>
+    </div>
+  </div>
+  <div class="basic-info">
+    <div class="left-side">
+      <div>
+        <ion-img src="assets/icon/phone.svg"></ion-img>
+        <p class="text">Call</p>
+      </div>
+      <div>
+        <ion-img src="assets/icon/location.svg"></ion-img>
+        <p class="text">Directions</p>
+      </div>
+      <div>
+        <ion-img src="assets/icon/share.svg"></ion-img>
+        <p class="text">Share</p>
+      </div>
+      <div>
+        <ion-img src="assets/icon/favourite.svg"></ion-img>
+        <p class="text">Favourite</p>
+      </div>
+    </div>
+    <div *ngIf="men" class="right-side">
+      <div class="rateing">
+        <ion-icon class="icon" name="star-outline"></ion-icon>
+        <p class="text">4.1</p>
+      </div>
+      <p class="text">5k + ratings</p>
+    </div>
+  </div>
+  <div class="divider">
+    <div class="dotted-line"></div>
+  </div>
+
+  <div class="blocks">
+    <div class="left-block">
+      <!-- <ion-image class="per-img" src="../../../assets/icon/percent.png"></ion-image> -->
+      <div class="top-side">
+        <ion-img src="../../../assets/icon/percent.svg"></ion-img>
+        <p class="text">50% Off</p>
+      </div>
+      <p class="para">Use code FREE50</p>
+    </div>
+    <div class="right-block">
+      <div class="top-side">
+        <ion-img src="../../../assets/icon/percent.svg"></ion-img>
+        <p class="text">60% Off on debit card</p>
+      </div>
+      <p class="para">No Coupon required</p>
+    </div>
+  </div>
+  <div class="divider-line"></div>
+
+ 
+  <!-- <div class="share-btn">
+    <ion-icon class="menu" name="share"></ion-icon>
+  </div> -->
+  <div>
+    <app-category-tabs></app-category-tabs>
+  </div>
+  <div>
+    <app-salon-offers></app-salon-offers>
+  </div>
+
+
+  <!-- <div class="chips-block">
+    <ng-container *ngFor="let item of chips">
+      <div class="chips">
+        <p class="text">{{item.name}}</p>
+      </div>
+
+    </ng-container>
+    <div class="menu-btn">
+      <ion-icon class="menu" name="menu"></ion-icon>
+    </div>
+  </div>
+
+  <div class="recomend">
+    <h3 class="heading">Recommended(5)</h3>
+    <ng-container *ngFor="let item of recList; let i=index">
+      <div class="rec-list">
+        <div class="left-side">
+          <div class="image">
+            <img class="img" src="{{item.img}}" alt="">
+          </div>
+          <ion-label class="label">
+            <h1 class="h-text">{{item.title}}</h1>
+            <p class="text">${{item.price}}</p>
+            <div class="time">
+              <ion-icon class="time-icon" name="time"></ion-icon>
+              <p class="minute">{{item.time}}</p>
+            </div>
+          </ion-label>
+        </div>
+        <div class="right-side">
+          <p class="select-btn">Select </p>
+          <ion-icon class="add-icon" name="add"></ion-icon>
+        </div>
+      </div>
+      <hr *ngIf="i < recList.length - 1" class="custom-hr">
+
+    </ng-container>
+
+  </div>
+
+
+  <div class="packages">
+    <h3 class="heading">Packages</h3>
+    <ng-container *ngFor="let item of packageList; let i=index">
+      <div class="rec-list">
+        <div class="left-side">
+          <div class="image">
+            <img class="img" src="{{item.img}}" alt="">
+          </div>
+          <ion-label class="label">
+            <h1 class="h-text">{{item.title}}</h1>
+            <p class="text">${{item.price}}</p>
+            <div class="time">
+              <ion-icon class="time-icon" name="time"></ion-icon>
+              <p class="minute">{{item.time}}</p>
+            </div>
+          </ion-label>
+        </div>
+        <div class="right-side">
+          <p class="select-btn">Select </p>
+          <ion-icon class="add-icon" name="add"></ion-icon>
+        </div>
+      </div>
+      <hr *ngIf="i < packageList.length - 1" class="custom-hr">
+
+    </ng-container>
+
+  </div> -->
+
+</ion-content>

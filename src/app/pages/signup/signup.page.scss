@@ -1,0 +1,109 @@
+@import "../../../global.scss";
+@mixin padding{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.body {
+
+    .signup-text {
+        height: 189px !important;
+        background-color: var(--blue);
+   
+
+        .ionic-items {
+            --background: var(--blue);
+            --color: #ffffff;
+
+            .signup {
+                margin-top: 70px !important;
+                @include f-33;
+                line-height: 43px;
+                margin-bottom: 10x;
+            }
+            .desc {
+                color: #ffffff;
+                font-size: 14px !important;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .form {
+        margin-top: 60px !important;     
+
+        .ionic-item{
+            .label{
+                padding-left: 8px;
+                font-size: 10px;
+                line-height: 16px;
+            }
+            .input {
+               border: 1px solid var(--input-border);
+               border-radius: 10px !important;
+               --height: 50px !important;
+               --padding-start: 5px;
+               --padding-top: 15px;
+               --padding-bottom: 15px;
+           }
+
+        }
+        .btn {
+            margin-top: 20px;
+            @include padding;
+
+            ion-button {
+                width: 100%;
+                --background: var(--blue);
+            }
+        }
+    }
+
+    .divider {
+        margin-top: 20px;
+       @include padding;
+        width: 100%;
+        height: auto;
+
+        .ionic-col{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .span1 {
+                display: block;
+                align-items: center;
+                height: 1px;
+                width: 100%;
+                background-color: var(--input-border);
+            }
+            .div-text {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .logos{
+        @include padding;
+        margin-top: 40px;
+
+        .col{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .img{
+                height: 25px;
+                width: 31px
+            }
+
+            .logo-text{
+                margin-top: 15px;
+                font-size: 12px;
+                font-weight: bold;
+                color: var(--blue);
+            }
+           
+        }
+    }
+}

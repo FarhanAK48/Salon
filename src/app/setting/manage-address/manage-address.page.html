@@ -1,0 +1,30 @@
+
+
+<ion-content class="content" [fullscreen]="true">
+ <div class="body">
+  <div class="header">
+    <ion-img class="icon" src="/assets/icon/cross.svg"></ion-img>
+    <p class="title">Your saved Addresses</p>
+  </div>
+
+  <ng-container *ngFor="let item of address">    
+  <div class="list">
+      <ion-img class="home-icon" src="/assets/icon/home.svg"></ion-img>
+      <div class="right-section">
+        <p class="title p">Home</p>
+        <p class="subtitle p">3944 Water Street, Walnut Creek, California</p>
+        <div class="btns p">
+          <p class="edit p">Edit</p>
+          <p class="delete p" id="open-modal">Delete</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+ </div>
+
+ <ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.5,0.75, 1]">
+  <ng-template>
+    <app-delete-address-confirmation ></app-delete-address-confirmation>   
+  </ng-template>
+</ion-modal>
+</ion-content>

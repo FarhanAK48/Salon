@@ -1,0 +1,7 @@
+{
+  "name": "salon-service",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

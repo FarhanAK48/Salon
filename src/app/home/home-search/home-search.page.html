@@ -1,0 +1,86 @@
+<ion-content class="content" [fullscreen]="true">
+  <div class="basic">
+    <ion-item class=" item back-arrow" lines="none">
+      <ion-img src="/assets/icon/mappin.svg"></ion-img>
+      <div class="title">Munich Center</div>
+      <ion-img src="/assets/icon/down-arrow.svg"></ion-img>
+    </ion-item>
+
+    <ion-item class="item input" lines="none">
+      <ion-input labelPlacement="stacked" placeholder="Shop name or Service">
+        <ion-img slot="start" class="input-icon" src="/assets/icon/search-blue.svg"></ion-img>
+
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="item recent-searches" lines="none">
+      <p class="search-text" slot="start">Recently searched</p>
+      <p class="clear-text" slot="end">Clear all</p>
+    </ion-item>
+
+    <ng-container *ngFor="let item of searches">
+    <ion-item class="item searches" lines="none">
+        <ion-img class="icon" src="/assets/icon/search.svg"></ion-img>
+        <p class="text">{{item.title}}</p>
+      </ion-item>
+    </ng-container>
+
+    <hr class="custom-line">
+
+    <div class="trending-near-you">
+      <p class="title">Trending near you</p>
+
+      <ion-grid class="grid">
+        <ion-row>
+          <ng-container *ngFor="let item of trendingCards">
+          
+            <ion-col size="6">
+              <div class="card">
+                <ion-img src="/assets/images/women-saloon.png"></ion-img>
+                <ion-card-header class="card-header">
+                  <ion-card-title class="title">Woodlands Hills Salon</ion-card-title>
+                  <ion-card-subtitle class="subtitle">FOR MEN & WOMEN</ion-card-subtitle>
+                </ion-card-header>
+  
+                <ion-card-content class="card-content">
+                  <div class="detail">
+                    <p class="text">Haircut, Spa, Massage</p>
+                    <div class="dot"></div>
+                    <ion-img src="/assets/icon/star-outline.svg"></ion-img>
+                    <p class="rating-value">4.1</p>
+                  </div>
+                  <div class="detail">
+                    <p class="text">Kaira throughway </p>
+                    <div class="dot"></div>
+                    <p class="km">5.0 kms</p>
+                    <div class="dot"></div>
+                    <p class="km">$$</p>
+                  </div>
+                </ion-card-content>
+              </div>
+            </ion-col>
+          </ng-container>
+      
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <hr class="custom-line">
+    <div class="services">
+      <p class="title">Try these services</p>
+
+      <ion-grid class="grid">
+        <ion-row>
+          <ng-container *ngFor="let item of services">
+            <ion-col size="4">
+              <ion-img src="{{item.img}}"></ion-img>
+              <p class="text">{{item.title}}</p>
+            </ion-col>          
+          </ng-container>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+
+</ion-content>

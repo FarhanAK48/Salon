@@ -1,0 +1,154 @@
+@import "../../../global.scss";
+
+@mixin screen-padding {
+    padding: 0px 16px !important;
+}
+.content {
+    --color: var(--text-dark);
+    color: var(--text-dark);
+    .basic {
+        @include screen-padding;
+        .item {
+            --padding-start: 0px !important;
+            --padding-end: 0px !important;
+            --inner-padding-end: 0;
+        }
+        .back-arrow {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item {
+            --padding-start: 0px;
+            --padding-end: 0px;
+        }
+
+        .title {
+            @include f-23;
+        }
+
+        .shop {
+            margin-top: 30px;
+            .salon-name {
+                @include f-19;
+            }
+
+            .fav-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+
+                .fav-icon {
+                    height: 24px;
+                    width: 24px;
+                }
+                .favorite {
+                    @include f-10;
+                    font-weight: bold;
+                    margin: 0px;
+                }
+            }
+        }
+
+        .shop-service {
+            margin-top: 20px;
+            .title {
+                @include f-15;
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        }
+
+        .calander {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            .calander-icon {
+                height: 24px;
+                width: 24px;
+            }
+            .date {
+                @include f-15;
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        }
+
+        .services {
+            margin-bottom: 20px;
+            .detail {
+                .name {
+                    @include f-15;
+                    font-weight: bold;
+                    margin: 0px;
+                }
+
+                .total-services {
+                    display: flex;
+                    align-items: center;
+
+                    .number {
+                        padding: 0px 8px;
+                        border: 1px solid var(--green);
+                        color: var(--green);
+                        border-radius: 5px;
+                        margin: 0px;
+                        @include f-12;
+                    }
+                    .operator {
+                        margin: 0px 5px;
+                    }
+                    .amount {
+                        margin: 0px;
+                        @include f-15;
+                    }
+                }
+            }
+            .total-amount {
+                margin: 0px;
+                @include f-15;
+            }
+        }
+
+        .amounts{         
+            margin-top: 30px;
+            .items{
+    
+                .total-item{
+                    @include f-15;
+                }
+                .amount{
+                    @include f-15;
+                    line-height: 19.5px;
+                }
+            }
+    
+            .discount{
+                @include f-15;
+                line-height: 19.5px;
+    
+                .amount{
+                    color: var(--green);
+                }
+            }
+    
+            .payables{
+                @include f-19;
+                margin-top: 25px;
+            }
+        }
+
+        .sub-title{
+            margin-top: 20px;
+            @include f-19;
+        }
+
+        .recorder-button{
+            --background: var(--blue);
+            --padding-top: 16px;
+            --padding-bottom: 16px;
+
+        }
+    }
+}

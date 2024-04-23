@@ -1,0 +1,53 @@
+@import '../../../global.scss';
+
+.content{
+    color: var(--text-dark);
+    --color: var(--text-dark);
+
+    .list{
+        padding: 0px 16px;
+        .item {
+            --padding-start: 0px !important;
+            --padding-end: 0px !important;
+            --inner-padding-end: 0;
+        }
+
+        .item-title{
+
+            .title{
+                margin-left: 10px;
+                @include f-19;
+                font-weight: bold;
+                
+            }
+        }
+
+        .item-header{
+            display: flex;
+            flex-direction: column;
+            .img{
+                height: 24px;
+                width: 24px;
+            }
+            .title{
+                @include f-19;
+                font-weight: bold;
+                margin: 5px 0px;
+                
+            }
+        }
+        .custom-line{
+            height: 1px;
+            background-color: var(--input-border);
+           
+        }
+        .item-details{
+          
+            .title{               
+                @include f-15;
+                font-weight: bold;            
+                
+            }
+        }
+    }
+}

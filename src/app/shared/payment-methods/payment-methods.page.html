@@ -1,0 +1,27 @@
+
+
+<ion-content class="content" [fullscreen]="true">
+ <ion-list class="list">
+        <ion-item *ngIf="type === 'checkout'" class="item item-title" lines="none">
+          <ion-img  src="../../../assets/icon/cross.svg"></ion-img>
+          <p class="title"> Select Payment Method</p>
+        </ion-item>
+        <div *ngIf="type !== 'checkout'" class="item-header">
+          <ion-img routerLink="/logout" class="img" src="../../../assets/icon/cross.svg"></ion-img>
+          <p class="title"> Payment Methods</p>
+        </div>
+        <hr class="custom-line">
+        <ng-container *ngFor="let item of paymentMethods">
+          <ion-item class="item item-details" lines="none">
+            <ion-img slot="start" src="{{item.img}}"></ion-img>
+            <p class="title">{{item.title}}</p>
+            <ion-img *ngIf="item?.icon" slot="end" src="{{item?.icon}}"></ion-img>
+          </ion-item>
+        </ng-container>
+     
+        <ion-item [id]="modelId" class="item item-details" lines="none">
+          <ion-img slot="start" src="/assets/icon/add.svg"></ion-img>
+          <p class="title">Add payment method</p>
+        </ion-item>
+      </ion-list>
+</ion-content>

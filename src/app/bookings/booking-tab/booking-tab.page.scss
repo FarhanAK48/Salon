@@ -1,0 +1,15 @@
+@import "../../../global.scss";
+.content {
+    color: var(--text-dark);
+    --color: var(--text-dark);
+    --padding-bottom: 30px;
+    .segment{
+        padding: 0px 16px !important;
+    }
+
+    .booking{
+        margin: 20px 0px;
+        @include f-23;
+        padding: 0px 16px !important;
+    }
+}

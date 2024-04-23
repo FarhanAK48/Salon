@@ -1,0 +1,67 @@
+<ion-content class="content" [fullscreen]="true">
+  <div class="body">
+    <div class="header">
+      <ion-img class="icon" src="/assets/icon/back-arrow-black.svg"></ion-img>
+      <p class="title">Add Card</p>
+    </div>
+
+    <div class="form">
+      <ion-list>
+        <ion-item lines="none" class="items">
+          <ion-label class="label" position="stacked">Name on Cards</ion-label>
+          <ion-input class="input" type="text" placeholder="Your Name"></ion-input>
+        </ion-item>
+
+        <!-- <ion-item lines="none" class="items">
+          <ion-label class="label" position="stacked">Card Number</ion-label>
+      
+          <ion-input class="input p-0" labelPlacement="floating" placeholder="email@domain.com">
+            <ion-img slot="start" class="input-icon" src="/assets/icon/credit-card.svg"></ion-img>           
+            <ion-img slot="end" class="input-icon" src="/assets/icon/credit-card.svg"></ion-img>           
+          </ion-input>
+        </ion-item> -->
+
+        <ion-item lines="none" class="item items">
+          <ion-label class="label" position="stacked">Card Number</ion-label>
+          <ion-input class="input p-0" labelPlacement="stacked" label="" placeholder="email@domain.com">
+            <ion-img slot="start" class="input-icon" src="/assets/icon/credit-card.svg"></ion-img>           
+
+            <ion-button fill="clear" slot="end" aria-label="Show/hide">
+              <ion-img slot="end" class="input-icon" src="/assets/icon/check-circle-green.svg"></ion-img> 
+            </ion-button>
+          </ion-input>
+        </ion-item>
+
+        <ion-grid class="grid">
+          <ion-row class="row">
+            <ion-col size="6" class="col-1">
+              <ion-item lines="none" class="items">
+                <ion-label class="label" position="stacked">Exp. Date</ion-label>
+                <ion-input class="input" type="text" placeholder="MM/YY"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6" class="col-2">
+              <ion-item lines="none" class="items">
+                <ion-label class="label" position="stacked">CVV</ion-label>
+                <ion-input class="input" type="text" placeholder="123"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>    
+
+      <!-- <div class="btn"> -->
+        <!-- <ion-button class="add-button btn" routerLink="/men-shop">Add Card</ion-button> -->
+      <!-- </div> -->
+    </div>
+
+  
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="tool-bar">
+        <ion-button class="add-button btn" routerLink="/men-shop">Add Card</ion-button>
+  </ion-toolbar>
+</ion-footer>

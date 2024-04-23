@@ -1,0 +1,62 @@
+.body {
+    position: relative;
+    background-color: #000 !important;
+    .img-wrapper {
+        position: relative;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .img {
+            width: auto;
+            height: auto;
+            background: cover;
+
+            opacity: 0.2 !important;
+        }
+    }
+
+    .intro-text {
+        position: absolute;
+        top: 469px;
+        margin: 0px 20px;
+        // margin-right: 15px;
+        .text {
+            font-size: 33px;
+            font-weight: 700;
+            color: white !important;
+        }
+    }
+
+    .btns {
+        position: absolute;
+        top: 710px;        
+        width: 100%;
+        display: flex !important;
+        justify-content: space-between !important;
+        
+        
+        .login {
+            width: 160px !important;
+            height: 48px;
+            --border-color: white;
+            --color: white;
+             margin-left: 20px;
+        }
+        .get-start {
+            width: 160px !important;
+            height: 48px;
+              margin-right: 20px;           
+            --background: white; 
+            --color: black;
+        }
+    }
+
+   
+}
+
+

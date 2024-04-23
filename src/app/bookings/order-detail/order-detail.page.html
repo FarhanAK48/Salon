@@ -1,0 +1,60 @@
+<ion-content class="content">
+  <div class="basic">
+    <ion-item class=" item back-arrow" lines="none">
+      <ion-img src="../../../assets/icon/cross.svg"></ion-img>
+      <!-- <ion-icon slot="start" name="arrow-back-outline"></ion-icon> -->
+    </ion-item>
+    <div class="title">Order Details</div>
+
+    <ion-item class="item shop" lines="none">
+      <div slot="start" class="salon-name">Woodlands Hills Salon</div>
+      <div class="fav-section" slot="end">
+        <ion-img class="fav-icon" src="../../../assets/icon/favourite.svg"></ion-img>
+        <p class="favorite">Favorite</p>
+      </div>
+    </ion-item>
+    <ion-item class="item shop-service" lines="none">
+      <ion-img src="../../../assets/icon/shop.svg"></ion-img>
+      <p class="title">Shop Service</p>
+    </ion-item>
+    <ion-item class="item calander" lines="none">
+      <ion-img class="calander-icon" src="../../../assets/icon/calander.svg"></ion-img>
+      <p class="date">10 March 2021</p>
+    </ion-item>
+    <ng-container *ngFor="let item of services">
+    <ion-item class="item services" lines="none">
+        <div class="detail" slot="start">
+          <p class="name">{{item.title}}</p>
+          <div class="total-services">
+            <p class="number">2</p>
+            <p class="operator">*</p>
+            <p class="amount">$160</p>
+          </div>
+        </div>
+        <p class="total-amount" slot="end">$160</p>
+      
+      </ion-item>
+    </ng-container>
+
+    <div class="amounts">
+      <ion-item class="item items" lines="none">
+        <ion-text class="total-item" slot="start">Item total </ion-text>
+        <ion-text class="amount" slot="end">$112</ion-text>
+      </ion-item>
+  
+      <ion-item class="item discount" lines="none">
+        <ion-text class="total-discount" slot="start">Coupon Discount <span>(NEW100)</span></ion-text>
+        <ion-text class="amount" slot="end">-$10</ion-text>
+      </ion-item>
+  
+      <ion-item class="item payables" lines="none">
+        <ion-text class="payable-amount" slot="start">Amount Payable</ion-text>
+        <ion-text slot="end">$325</ion-text>
+      </ion-item>
+  
+    </div>
+
+    <div class="sub-title">Order Details</div>
+    <ion-button class="recorder-button" expand="block">Recorder Booking</ion-button>
+  </div> 
+</ion-content>

@@ -1,0 +1,138 @@
+<ion-content class="content" [fullscreen]="true">
+  <div class="basic">
+    <ion-item class=" item back-arrow" lines="none">
+      <ion-img src="../../../assets/icon/mappin.svg"></ion-img>
+      <div id="open-modal" class="title">Munich Center</div>
+      <ion-img src="../../../assets/icon/down-arrow.svg"></ion-img>
+    </ion-item>
+
+    <ion-item class="item input" lines="none">
+      <ion-input labelPlacement="stacked" placeholder="Shop name or Service">
+        <ion-img slot="start" class="input-icon" src="../../../assets/icon/search-blue.svg"></ion-img>
+
+      </ion-input>
+    </ion-item>
+
+    <div class="chips">
+      <app-home-tabs></app-home-tabs>
+    </div>
+
+    <div class="beauty-services">
+      <ion-item lines="none">
+        <p class="title" slot="start">Beauty Services</p>
+        <div class="see-all" slot="end">
+          <p class="text">See All</p>
+          <ion-img class="icon" src="/assets/icon/right-arrow.svg"></ion-img>
+        </div>
+      </ion-item>
+
+      <ion-grid class="grid">
+        <ion-row class="row">
+          <ng-container *ngFor="let item of services">
+            <ion-col class="col" size="4">
+              <ion-img [src]="item.image"></ion-img>
+              <p class="label">{{item.label}}</p>
+            </ion-col>
+          </ng-container>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="near-you">
+      <ion-item lines="none">
+        <p class="title" slot="start">Popular near you</p>
+        <div class="see-all" slot="end">
+          <p class="text">See All</p>
+          <ion-img class="icon" src="/assets/icon/right-arrow.svg"></ion-img>
+        </div>
+      </ion-item>
+      <div class="cards">
+        <swiper-container pagination="true" navigation="false">
+          <ng-container *ngFor="let item of slider">
+            <swiper-slide class="swiperSlide">
+              <div class="card" routerLink="/men-shop">
+                <ion-img src="../../../assets/images/women-saloon.png"></ion-img>
+                <ion-card-header class="card-header">
+                  <ion-card-title class="title">Woodlands Hills Salon</ion-card-title>
+                  <ion-card-subtitle class="subtitle">FOR MEN & WOMEN</ion-card-subtitle>
+                </ion-card-header>
+
+                <ion-card-content class="card-content">
+                  <div class="detail">
+                    <p class="text">Haircut, Spa, Massage</p>
+                    <div class="dot"></div>
+                    <ion-img src="/assets/icon/star-outline.svg"></ion-img>
+                    <p class="rating-value">4.1</p>
+                  </div>
+                  <div class="detail">
+                    <p class="text">Kaira throughway </p>
+                    <div class="dot"></div>
+                    <p class="km">5.0 kms</p>
+                    <div class="dot"></div>
+                    <p class="km">$$</p>
+                  </div>
+                </ion-card-content>
+              </div>
+            </swiper-slide>
+          </ng-container>
+        </swiper-container>
+      </div>
+
+    </div>
+
+    <div class="best-offers">
+      <ion-item lines="none">
+        <p class="title" slot="start">Best Offers</p>
+        <div class="see-all" slot="end">
+          <p class="text">See All</p>
+          <ion-img class="icon" src="/assets/icon/right-arrow.svg"></ion-img>
+        </div>
+      </ion-item>
+      <div class="cards">
+        <swiper-container pagination="true" navigation="false">
+          <ng-container *ngFor="let item of slider">
+            <swiper-slide class="swiperSlide">
+              <div class="card">
+                <div class="slider-img">
+                  <ion-img src="../../../assets/images/offer.png"></ion-img>
+                  <div class="discount-chip">
+                    <ion-img src="../../../assets/icon/percent.svg"></ion-img>
+                    <p class="discount">50% Off</p>
+                  </div>
+
+                </div>
+                <ion-card-header class="card-header">
+                  <ion-card-title class="title">Mounrich Spa Services</ion-card-title>
+                  <ion-card-subtitle class="subtitle">FOR WOMEN</ion-card-subtitle>
+                </ion-card-header>
+
+                <ion-card-content class="card-content">
+                  <div class="detail">
+                    <p class="text">Spa Salon</p>
+                    <div class="dot"></div>
+                    <ion-img src="/assets/icon/star-outline.svg"></ion-img>
+                    <p class="rating-value">4.1</p>
+                  </div>
+                  <div class="detail">
+                    <p class="text">Woodland Hills </p>
+                    <div class="dot"></div>
+                    <p class="km">5.0 kms</p>
+                    <div class="dot"></div>
+                    <p class="km">$$</p>
+                  </div>
+                </ion-card-content>
+              </div>
+            </swiper-slide>
+          </ng-container>
+        </swiper-container>
+      </div>
+
+    </div>
+  </div>
+
+  <ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.75" [breakpoints]="[0,0.25, 0.5,0.75, 1]">
+    <ng-template>
+     <app-home-sort></app-home-sort>
+    </ng-template>
+  </ion-modal>
+</ion-content>

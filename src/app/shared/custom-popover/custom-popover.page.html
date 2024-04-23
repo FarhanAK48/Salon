@@ -1,0 +1,15 @@
+
+
+<ion-content class="content">
+  <div class="body">
+    <div class="popup-header">
+      <p class="title">Recomended</p>
+      <p class="quantity">5</p>
+    </div>
+    <div class="pop-detail" *ngFor="let item of itemArr">
+      <p class="item-name">{{item.name}}</p>
+      <p class="item-val">{{item.value}}</p>
+    </div>
+
+  </div>
+</ion-content>

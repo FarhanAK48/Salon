@@ -1,0 +1,52 @@
+<ion-content class="content" [fullscreen]="true">
+
+  <div class="img-section">
+    <ion-img src="/assets/images/cutting.png"></ion-img>
+    <div class="back-arrow">
+      <ion-img slot="start" src="/assets/icon/back-arrow.svg"></ion-img>
+    </div>
+    <div class="over-img" lines="none">
+      <ion-img class="mappin-arrow" src="/assets/icon/mappin-white.svg"></ion-img>
+      <p class="text">Munich Center</p>
+      <ion-img src="/assets/icon/down-arrow-white.svg"></ion-img>
+    </div>
+    <p class="title">Haircut for Men</p>
+
+  </div>
+  <div class="body">
+    <div class="chips">
+      <app-home-tabs></app-home-tabs>
+    </div>
+    <div class="total-services">
+      <p class="title">102 shops giving Haircut service</p>
+      <ng-container *ngFor="let item of services">
+
+        <div class="card">
+          <ion-img src="../../../assets/images/women-saloon.png"></ion-img>
+          <ion-card-header class="card-header">
+            <ion-card-subtitle class="subtitle">FOR MEN & WOMEN</ion-card-subtitle>
+            <ion-card-title class="title">Woodlands Hills Salon</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content class="card-content">
+            <div class="detail">
+              <p class="text">Haircut, Spa, Massage</p>
+              <div class="dot"></div>
+              <ion-img src="/assets/icon/star-outline.svg"></ion-img>
+              <p class="rating-value">4.1</p>
+            </div>
+            <div class="detail">
+              <p class="text">Kaira throughway </p>
+              <div class="dot"></div>
+              <p class="km">5.0 kms</p>
+              <div class="dot"></div>
+              <p class="km">$$</p>
+            </div>
+          </ion-card-content>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+
+</ion-content>

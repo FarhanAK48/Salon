@@ -1,0 +1,27 @@
+<ion-content class="body" [fullscreen]="true">
+  <swiper-container pagination="true" navigation="false">
+    <ng-container *ngFor="let item of sliderItem">
+      <swiper-slide class="swiperSlide">
+        <div class="img-wrapper">
+          <ion-img class="img" class="img-size" [src]="item.img" alt="Slide 1"></ion-img> 
+          <div class="overlay"></div>        
+        </div>
+  
+        <div class="intro-text">
+          <p class="text">{{item.text}}</p>
+        </div>
+        <div class="btns"> 
+          <div>
+            <ion-button routerLink="/login" class="login" fill="outline">Login</ion-button>
+          </div>     
+          <div>
+            <ion-button routerLink="/signup" class="get-start" slot="end">Sign up</ion-button>
+          </div>
+        </div>
+       
+
+      </swiper-slide>
+    </ng-container>   
+  </swiper-container>
+</ion-content>
+
