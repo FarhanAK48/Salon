@@ -83,7 +83,7 @@ export class LogoutPage implements OnInit {
       this.router.navigate(['/about']);
     }
     else {
-      this.router.navigate(['/payment-method']);
+      // this.router.navigate(['']);
     }
 
 

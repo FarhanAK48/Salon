@@ -25,7 +25,8 @@ export class LocationPage implements OnInit {
   handleAddressChange(place: google.maps.places.PlaceResult) {
     console.log('Place**', place)
     this.destination = place.formatted_address;
-    console.log('Name**', place.formatted_address)
+    console.log('address**', place.formatted_address)
+    console.log('Name**', place.name)
 
     console.log('LAT**', place.geometry?.location?.lat())
     console.log('LNG**', place.geometry?.location?.lng())

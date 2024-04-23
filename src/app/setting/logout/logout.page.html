@@ -23,7 +23,7 @@
     </div> 
 
     <ng-container *ngFor="let item of list">    
-      <ion-item class="item list" lines="none" (click)=" onNavigate(item)">
+      <ion-item [attr.id]="item.id === 7 ? 'open-modal' : null" class="item list" lines="none" (click)=" onNavigate(item)">
         <div slot="start" class="left-section">
           <ion-img class="icon" [src]="item.icon"></ion-img>
           <div class="title-section">
@@ -37,4 +37,10 @@
     </ng-container>
 
 </div>
+
+<ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0,0.25, 0.5,0.75, 1]">
+  <ng-template>
+   <app-logout-confirmation></app-logout-confirmation>
+  </ng-template>
+</ion-modal>
 </ion-content>

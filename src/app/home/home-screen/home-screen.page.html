@@ -1,8 +1,8 @@
 <ion-content class="content" [fullscreen]="true">
   <div class="basic">
-    <ion-item class=" item back-arrow" routerLink="/location" lines="none">
+    <ion-item class="item back-arrow" lines="none" >
       <ion-img src="/assets/icon/mappin.svg"></ion-img>
-      <div id="open-modal" class="title">Munich Center</div>
+      <div (click)="onNavigate()" class="title">Munich Center</div>
       <ion-img src="/assets/icon/down-arrow.svg"></ion-img>
       <ion-img slot="end" routerLink="/booking" src="/assets/icon/search.svg"></ion-img>
     </ion-item>
@@ -14,7 +14,7 @@
       </ion-input>
     </ion-item>
 
-    <div class="chips">
+    <div  id="open-modal" class="chips">
       <app-home-tabs></app-home-tabs>
     </div>
 
