@@ -8,26 +8,26 @@
     </ion-item>
   </div>
 
-  <div class="form">
+  <form class="form" [formGroup]="registerForm">
     <ion-list>
       <ion-item lines="none" class="ionic-item">
         <ion-label class="label" position="stacked">Name</ion-label>
-        <ion-input class="input" type="text" placeholder="Your Placeholder"></ion-input>
+        <ion-input class="input" formControlName="name" type="text" placeholder="Your Placeholder"></ion-input>
       </ion-item>
 
       <ion-item lines="none" class="ionic-item">
         <ion-label class="label" position="stacked">Email</ion-label>
-        <ion-input class="input" type="text" placeholder="Your Placeholder"></ion-input>
+        <ion-input class="input" formControlName="email" type="text" placeholder="Your Placeholder"></ion-input>
       </ion-item>
       <ion-item lines="none" class="ionic-item">
         <ion-label class="label" position="stacked">Password</ion-label>
-        <ion-input class="input" type="text" placeholder="Your Placeholder" style="height: 50px;"></ion-input>
+        <ion-input class="input" formControlName="password" type="text" placeholder="Your Placeholder" style="height: 50px;"></ion-input>
       </ion-item>
     </ion-list>
     <div class="btn">
-      <ion-button routerLink="/otp">SignUp</ion-button>
+      <ion-button routerLink="/otp" [disabled]="registerForm.invalid">SignUp</ion-button>
     </div>
-  </div>
+  </form>
 
   <div class="divider">
     <ion-grid>

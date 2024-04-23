@@ -7,21 +7,21 @@
     <p class="permission">Don't have an account? <span>SignUp</span></p>
   </ion-label>
 </ion-item>
-<div class="form">
+<form class="form" [formGroup]="loginForm">
   <ion-list>
     <ion-item lines="none" class="items">
-      <ion-label class="label" position="stacked">Name</ion-label>
-      <ion-input class="input" type="text" placeholder="Your Placeholder"></ion-input>
+      <ion-label class="label" position="stacked">Email</ion-label>
+      <ion-input class="input" formControlName="email" type="text" placeholder="Your Placeholder"></ion-input>
     </ion-item>
     <ion-item lines="none" class="items">
-      <ion-label class="label" position="stacked">Email</ion-label>
-      <ion-input class="input" type="text" placeholder="Your Placeholder"></ion-input>
+      <ion-label class="label" position="stacked">Password</ion-label>
+      <ion-input class="input" formControlName="password" type="text" placeholder="Your Placeholder"></ion-input>
     </ion-item>
   </ion-list>
   <div class="btn">
-    <ion-button routerLink="/home-screen">Login</ion-button>
+    <ion-button routerLink="/home-screen" [disabled]="loginForm.invalid">Login</ion-button>
   </div>
-</div>
+</form>
 
 <div class="forgot-password">
  <p class="para" routerLink="/location">Forgot your Password?</p>

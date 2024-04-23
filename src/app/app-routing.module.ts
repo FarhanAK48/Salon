@@ -153,6 +153,8 @@ const routes: Routes = [
     path: 'location',
     loadChildren: () => import('./home/location/location.module').then( m => m.LocationPageModule)
   },
+
+
 ];
 
 @NgModule({

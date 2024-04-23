@@ -7,19 +7,19 @@
      <h2 class="title">Verify OTP</h2>
    </ion-label>
   </ion-item>
-  <div class="form">
+  <form class="form" [formGroup]="otpVerifyForm">
    <!-- <ion-item lines="none" class="ionic-item"> -->
     <div class="otp-fields">
-      <ion-input class="input" type="text" placeholder="0"></ion-input>
-      <ion-input class="input" type="text" placeholder="0"></ion-input>
-      <ion-input class="input" type="text" placeholder="0"></ion-input>
-      <ion-input class="input" type="text" placeholder="0"></ion-input>
+      <ion-input class="input" formControlName="a" type="text" placeholder="0"></ion-input>
+      <ion-input class="input" formControlName="b" type="text" placeholder="0"></ion-input>
+      <ion-input class="input" formControlName="c" type="text" placeholder="0"></ion-input>
+      <ion-input class="input" formControlName="d" type="text" placeholder="0"></ion-input>
     </div>
     <p class="code-confirmation">Didn't Receive the Code? <a class="resend">Resend</a></p>
    <!-- </ion-item> -->
    <div class="btn">
-     <ion-button routerLink="/login">Verify OTP</ion-button>
+     <ion-button routerLink="/login" [disabled]="otpVerifyForm.invalid">Verify OTP</ion-button>
    </div>
-  </div>
+  </form>
  </ion-content>
  

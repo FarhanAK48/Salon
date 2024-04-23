@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 interface VisaCard {
   id: number;
   img: string;
@@ -14,7 +14,7 @@ interface VisaCard {
 
 export class CheckoutPromoPage implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(private router:Router) { }
 
   visaArr:VisaCard[] = [
     {
@@ -33,10 +33,11 @@ export class CheckoutPromoPage implements OnInit {
 
   ngOnInit() {
     console.log('promo')
+ 
   }
 
   onNavigate(){
-    this.route.navigate(['/checkout-appointment'], {queryParams : {type: 'apply'}})
+    this.router.navigate(['/checkout'], {queryParams : {type: 'apply'}})
   }
 
 }

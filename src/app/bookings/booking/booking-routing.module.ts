@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { BookingPage } from './booking.page';
-import { OrderDetailPage } from '../order-detail/order-detail.page';
 
 const routes: Routes = [
   {
@@ -10,8 +9,8 @@ const routes: Routes = [
     component: BookingPage,
     children: [
       {
-        path: 'home',
-        loadChildren: () => import('../logout/logout.module').then(m => m.LogoutPageModule),
+        path: 'search',
+        loadChildren: () => import('./../../home/home-search/home-search.module').then(m => m.HomeSearchPageModule),
        
       },
       {
@@ -19,14 +18,12 @@ const routes: Routes = [
         loadChildren: () => import('../booking-tab/booking-tab.module').then(m => m.BookingTabPageModule),       
       },
       {
-        path: 'logout',
-        loadChildren: () => import('../logout/logout.module').then(m => m.LogoutPageModule),
-       
-      },
-   
+        path: 'account',
+        loadChildren: () => import('../../setting/logout/logout.module').then(m => m.LogoutPageModule),       
+      },   
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'account',
         pathMatch: 'full'
       }
     ]

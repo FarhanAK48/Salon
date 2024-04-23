@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutPage implements OnInit {
 
-  constructor() { }
+  qp:any;
+  constructor(private route: ActivatedRoute) { }
   services = [
     {
       id:1,
@@ -26,7 +28,8 @@ export class CheckoutPage implements OnInit {
   ]
 
   ngOnInit() {
-    console.log('checkout');
+    this.qp = this.route.snapshot.queryParams['type'];
+    console.log('QP',this.qp)
   }
 
 }

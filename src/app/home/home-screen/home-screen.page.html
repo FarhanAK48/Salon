@@ -1,14 +1,15 @@
 <ion-content class="content" [fullscreen]="true">
   <div class="basic">
-    <ion-item class=" item back-arrow" lines="none">
-      <ion-img src="../../../assets/icon/mappin.svg"></ion-img>
+    <ion-item class=" item back-arrow" routerLink="/location" lines="none">
+      <ion-img src="/assets/icon/mappin.svg"></ion-img>
       <div id="open-modal" class="title">Munich Center</div>
-      <ion-img src="../../../assets/icon/down-arrow.svg"></ion-img>
+      <ion-img src="/assets/icon/down-arrow.svg"></ion-img>
+      <ion-img slot="end" routerLink="/booking" src="/assets/icon/search.svg"></ion-img>
     </ion-item>
 
     <ion-item class="item input" lines="none">
       <ion-input labelPlacement="stacked" placeholder="Shop name or Service">
-        <ion-img slot="start" class="input-icon" src="../../../assets/icon/search-blue.svg"></ion-img>
+        <ion-img slot="start" class="input-icon" src="/assets/icon/search-blue.svg"></ion-img>
 
       </ion-input>
     </ion-item>
@@ -51,7 +52,7 @@
           <ng-container *ngFor="let item of slider">
             <swiper-slide class="swiperSlide">
               <div class="card" routerLink="/men-shop">
-                <ion-img src="../../../assets/images/women-saloon.png"></ion-img>
+                <ion-img src="/assets/images/women-saloon.png"></ion-img>
                 <ion-card-header class="card-header">
                   <ion-card-title class="title">Woodlands Hills Salon</ion-card-title>
                   <ion-card-subtitle class="subtitle">FOR MEN & WOMEN</ion-card-subtitle>

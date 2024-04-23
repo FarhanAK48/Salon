@@ -160,26 +160,28 @@
 
         }
         .grid{
-
+            .text{
+                @include f-13;
+                margin: 5px 0px;
+            }
             .btn {
               
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 border: 0.25px solid var(--blue);
-                padding: 8px;
+                padding: 3px;
                 border-radius:5px;
-                box-shadow: 0 0 10px rgba(83, 79, 79, 0.2);
+                box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
                 color: var(--blue);
-                width: 80px;
+                width: 60px;
 
                 .select-btn {
                     margin: 0px;
-                    font-size: 13px;
-                    line-height: 16px;
+                   @include f-10;
                 }
                 .add-icon {
-                    margin-left: 5px;                
+                    margin-left: 3px;                
                     height: 16px;
                     width: 16px;
                     font-size: 16px;
