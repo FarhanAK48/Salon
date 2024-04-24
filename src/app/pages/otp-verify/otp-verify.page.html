@@ -10,10 +10,10 @@
   <form class="form" [formGroup]="otpVerifyForm">
    <!-- <ion-item lines="none" class="ionic-item"> -->
     <div class="otp-fields">
-      <ion-input class="input" formControlName="a" type="text" placeholder="0"></ion-input>
-      <ion-input class="input" formControlName="b" type="text" placeholder="0"></ion-input>
-      <ion-input class="input" formControlName="c" type="text" placeholder="0"></ion-input>
-      <ion-input class="input" formControlName="d" type="text" placeholder="0"></ion-input>
+      <ion-input class="input" formControlName="a" maxlength="1" type="number" placeholder="0"></ion-input>
+      <ion-input class="input" formControlName="b" maxlength="1" type="number" placeholder="0"></ion-input>
+      <ion-input class="input" formControlName="c" maxlength="1" type="number" placeholder="0"></ion-input>
+      <ion-input class="input" formControlName="d" maxlength="1" type="number" placeholder="0"></ion-input>
     </div>
     <p class="code-confirmation">Didn't Receive the Code? <a class="resend">Resend</a></p>
    <!-- </ion-item> -->

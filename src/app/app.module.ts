@@ -12,7 +12,7 @@ import { NgxGpAutocompleteModule } from '@angular-magic/ngx-gp-autocomplete';
 register();
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,NgxGpAutocompleteModule],
+  imports: [BrowserModule, IonicModule.forRoot({mode:'ios'}), AppRoutingModule,NgxGpAutocompleteModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
       provide: Loader,

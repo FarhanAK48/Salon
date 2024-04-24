@@ -3,11 +3,11 @@
 <ion-content class="content" [fullscreen]="true">
  <ion-list class="list">
         <ion-item *ngIf="type === 'checkout'" class="item item-title" lines="none">
-          <ion-img  src="../../../assets/icon/cross.svg"></ion-img>
+          <ion-img routerLink="/logout"  src="../../../assets/icon/cross.svg"></ion-img>
           <p class="title"> Select Payment Method</p>
         </ion-item>
         <div *ngIf="type !== 'checkout'" class="item-header">
-          <ion-img routerLink="/logout" class="img" src="../../../assets/icon/cross.svg"></ion-img>
+          <ion-img routerLink="/booking" class="img" src="../../../assets/icon/cross.svg"></ion-img>
           <p class="title"> Payment Methods</p>
         </div>
         <hr class="custom-line">

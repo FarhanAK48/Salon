@@ -1,5 +1,6 @@
 .body {
     position: relative;
+    height: 100vh;
     background-color: #000 !important;
     .img-wrapper {
         position: relative;
@@ -28,7 +29,7 @@
         .text {
             font-size: 33px;
             font-weight: 700;
-            color: white !important;
+            color: var(--white); 
         }
     }
 
@@ -43,15 +44,15 @@
         .login {
             width: 160px !important;
             height: 48px;
-            --border-color: white;
-            --color: white;
+            --border-color: var(--white);
+            --color: var(--white);
              margin-left: 20px;
         }
         .get-start {
             width: 160px !important;
             height: 48px;
               margin-right: 20px;           
-            --background: white; 
+            --background: var(--white);
             --color: black;
         }
     }

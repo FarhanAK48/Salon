@@ -3,7 +3,7 @@
 <ion-content class="content">
   <div class="header">
     <ion-item class="item back-arrow" lines="none">
-      <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      <ion-icon slot="start" routerLink="/checkout" name="arrow-back-outline"></ion-icon>
     </ion-item>
     <div id="open-modal" class="title">Checkout</div> 
     <div class="appointment-subtitle">Select Date & Time for the appointment</div> 
@@ -12,11 +12,14 @@
       <div class="Service-dates">When would you like your service?</div> 
       <ion-grid class="grid">
         <ion-row class="row">
-          <ion-col class="day-date" size="2">
-            <p class="text day">Sat</p>
-            <p class="text date">19</p>
-          </ion-col>
-          <ion-col class="day-date" size="2">
+          <ng-container *ngFor="let item of serviceDate">
+            <ion-col [ngClass]="{'selected-item':selectedItem === item.id}" class="day-date" size="2" (click)="selectItem(item)">
+              <p class="text day">{{item.day}}</p>
+              <p class="text date">{{item.date}}</p>
+            </ion-col>
+          
+          </ng-container>
+          <!-- <ion-col class="day-date" size="2">
             <p class="text day">Sun</p>
             <p class="text date">20</p>
           </ion-col>
@@ -31,24 +34,21 @@
           <ion-col class="day-date" size="2">
             <p class="text day">Wed</p>
             <p class="text date">23</p>
-          </ion-col>
+          </ion-col> -->
         </ion-row>
       </ion-grid>
     </div>
     <div class="time-section">
       <div class="service-time">When would you like your service?</div> 
       <ion-grid class="grid">
-        <ng-container *ngFor="let item of serviceTime">
-          <ion-row class="row">
-            <ion-col  class="column day-date" size="5">
-              <p class="text day">{{item.hour}}</p>           
-            </ion-col>
-            <ion-col class="column day-date me-0" size="5">
-              <p class="text day">{{item.min}}</p>          
-            </ion-col>        
+        <ion-row class="row">
+            <ng-container *ngFor="let item of serviceTime">
+            <ion-col [ngClass]="{'selected-item':selectedTime === item.id}" class="column day-date" size="5" (click)="selectTime(item)">
+              <p class="text day">{{item.time}}</p>           
+            </ion-col>                
+          </ng-container>
           </ion-row>
 
-        </ng-container>
       
       </ion-grid>
     </div>

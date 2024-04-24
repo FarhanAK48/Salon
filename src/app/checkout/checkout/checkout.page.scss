@@ -6,6 +6,12 @@
 .content {
     --color: var(--text-dark);
     color: var(--text-dark);
+
+    .item {
+        --padding-start: 0px;
+        --padding-end: 0px;
+        --inner-padding-end: 0;
+    }
     .basic {
         @include screen-padding;
 
@@ -15,10 +21,7 @@
             flex-direction: column;
         }
 
-        .item {
-            --padding-start: 0px;
-            --padding-end: 0px;
-        }
+       
 
         .checkout {
           @include f-23;
@@ -97,6 +100,7 @@
     }
 
     .offers {
+        padding: 0px 16px;
         .offer {
             margin-left: 10px;
             @include f-15;
@@ -160,6 +164,15 @@
 
         }
         .grid{
+            -webkit-padding-start: 0px;
+            -webkit-padding-end: 0px;
+
+            .col-1{
+                -webkit-padding-start: 0px;
+            }
+            .col-3{
+                -webkit-padding-end: 0px;
+            }
             .text{
                 @include f-13;
                 margin: 5px 0px;
@@ -170,7 +183,7 @@
                 justify-content: space-between;
                 align-items: center;
                 border: 0.25px solid var(--blue);
-                padding: 3px;
+                padding: 3px 5px;
                 border-radius:5px;
                 box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
                 color: var(--blue);

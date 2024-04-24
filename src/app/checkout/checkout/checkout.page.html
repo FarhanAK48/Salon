@@ -11,10 +11,10 @@
       <ion-label class="text">Shop Service</ion-label>
     </ion-item>
     <hr class="custom-line">
-    <ion-item class="item date-time" lines="none" routerLink="/checkout-appointment">
+    <ion-item class="item date-time" lines="none" (click)="navToAppointment()">
       <ion-img class="date-icon" src="../../../assets/icon/calander.svg"></ion-img>
       <ion-label class="select-date">Select Date & Time</ion-label>
-      <!-- <ion-icon class="right-arrow" slot="end" name="chevron-forward-outline"></ion-icon> -->
+      <ion-icon class="right-arrow" slot="end" name="chevron-forward-outline"></ion-icon>
     </ion-item>
     <hr class="custom-line">
     <ng-container *ngFor="let item of services">
@@ -37,7 +37,7 @@
   </div>
 
   <div class="line"></div>
-  <ion-item *ngIf="!qp" class="item offers" lines="none" routerLink="/checkout-promo">
+  <ion-item *ngIf="!qp" class="item offers" lines="none" (click)="onNavigate()" >
     <ion-img class="percentage-icon" src="../../../assets/icon/percent-outline.svg"></ion-img>
     <ion-label class="offer">Offers & Promo Code</ion-label>
     <div class="view-offers">
@@ -64,7 +64,7 @@
 
     <ion-grid class="grid">
       <ion-row>
-        <ion-col size="4">
+        <ion-col class="col-1" size="4">
           <ion-img src="../../../assets/images/haircut.png"></ion-img>
           <ion-text class="text">Haircut</ion-text>
           <div class="btn">
@@ -72,7 +72,7 @@
             <ion-icon class="add-icon" name="add"></ion-icon>
           </div>
         </ion-col>
-        <ion-col size="4">
+        <ion-col class="col" size="4">
           <ion-img src="../../../assets/images/haircut.png"></ion-img>
           <ion-text class="text">Haircut</ion-text>
           <div class="btn">
@@ -80,7 +80,7 @@
             <ion-icon class="add-icon" name="add"></ion-icon>
           </div>
         </ion-col>
-        <ion-col size="4">
+        <ion-col class="col-3" size="4">
           <ion-img src="../../../assets/images/haircut.png"></ion-img>
           <ion-text class="text">Haircut</ion-text>
           <div class="btn">
@@ -95,7 +95,7 @@
 
   <div class="line"></div>
   <div class="amounts">
-    <ion-item class="item items" lines="none">
+    <ion-item class=" items item" lines="none">
       <ion-text class="total-item" slot="start">Item total </ion-text>
       <ion-text class="amount" slot="end">$112</ion-text>
     </ion-item>

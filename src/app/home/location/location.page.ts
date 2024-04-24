@@ -1,5 +1,6 @@
 import { NgxGpAutocompleteDirective } from '@angular-magic/ngx-gp-autocomplete';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { LocationService } from './location.service';
 
 @Component({
   selector: 'app-location',
@@ -16,7 +17,7 @@ export class LocationPage implements OnInit {
   radius: any = 20;
   map!: google.maps.Map;
   // display: google.maps.LatLngLiteral;
-  constructor() { }
+  constructor(private locationSer:LocationService) { }
 
   ngOnInit() {
     console.log('location')
@@ -26,7 +27,9 @@ export class LocationPage implements OnInit {
     console.log('Place**', place)
     this.destination = place.formatted_address;
     console.log('address**', place.formatted_address)
-    console.log('Name**', place.name)
+    console.log('Name**', place.name);
+    let name = place.name
+    this.locationSer.locationName.next(place?.name);
 
     console.log('LAT**', place.geometry?.location?.lat())
     console.log('LNG**', place.geometry?.location?.lng())

@@ -2,13 +2,13 @@
   <div class="basic">
     <ion-item class="item back-arrow" lines="none" >
       <ion-img src="/assets/icon/mappin.svg"></ion-img>
-      <div (click)="onNavigate()" class="title">Munich Center</div>
+      <div (click)="onNavigate()" class="title">Munich Center{{location}}</div>
       <ion-img src="/assets/icon/down-arrow.svg"></ion-img>
-      <ion-img slot="end" routerLink="/booking" src="/assets/icon/search.svg"></ion-img>
+      <ion-img slot="end" routerLink="/booking" src="/assets/icon/setting.svg"></ion-img>
     </ion-item>
 
     <ion-item class="item input" lines="none">
-      <ion-input labelPlacement="stacked" placeholder="Shop name or Service">
+      <ion-input routerLink="/home-search" labelPlacement="stacked" placeholder="Shop name or Service">
         <ion-img slot="start" class="input-icon" src="/assets/icon/search-blue.svg"></ion-img>
 
       </ion-input>

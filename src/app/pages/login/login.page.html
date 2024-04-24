@@ -4,18 +4,18 @@
 <ion-item class="ionic-item" lines="none">
   <ion-label class="label">    
     <h2 class="title"> Welcome Back!</h2>
-    <p class="permission">Don't have an account? <span>SignUp</span></p>
+    <p class="permission">Don't have an account? <span routerLink="/signup">SignUp</span></p>
   </ion-label>
 </ion-item>
 <form class="form" [formGroup]="loginForm">
   <ion-list>
     <ion-item lines="none" class="items">
       <ion-label class="label" position="stacked">Email</ion-label>
-      <ion-input class="input" formControlName="email" type="text" placeholder="Your Placeholder"></ion-input>
+      <ion-input class="input" formControlName="email" type="text" placeholder="Enter Email"></ion-input>
     </ion-item>
     <ion-item lines="none" class="items">
       <ion-label class="label" position="stacked">Password</ion-label>
-      <ion-input class="input" formControlName="password" type="text" placeholder="Your Placeholder"></ion-input>
+      <ion-input class="input" formControlName="password" type="password" placeholder="Enter Password"></ion-input>
     </ion-item>
   </ion-list>
   <div class="btn">
@@ -24,7 +24,7 @@
 </form>
 
 <div class="forgot-password">
- <p class="para" routerLink="/location">Forgot your Password?</p>
+ <p class="para">Forgot your Password?</p>
 </div>
 
 <div class="divider">

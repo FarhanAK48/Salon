@@ -3,7 +3,7 @@
     <ion-item class="ionic-items" lines="none">
       <ion-label>
         <h4 class="signup">SignUp</h4>
-        <p class="desc">Already have an account? Login</p>
+        <p class="desc">Already have an account? <span routerLink="/login">Login</span></p>
       </ion-label>
     </ion-item>
   </div>
@@ -12,16 +12,16 @@
     <ion-list>
       <ion-item lines="none" class="ionic-item">
         <ion-label class="label" position="stacked">Name</ion-label>
-        <ion-input class="input" formControlName="name" type="text" placeholder="Your Placeholder"></ion-input>
+        <ion-input class="input" formControlName="name" type="text" placeholder="Enter Name"></ion-input>
       </ion-item>
 
       <ion-item lines="none" class="ionic-item">
         <ion-label class="label" position="stacked">Email</ion-label>
-        <ion-input class="input" formControlName="email" type="text" placeholder="Your Placeholder"></ion-input>
+        <ion-input class="input" formControlName="email" type="text" placeholder="Enter Email"></ion-input>
       </ion-item>
       <ion-item lines="none" class="ionic-item">
         <ion-label class="label" position="stacked">Password</ion-label>
-        <ion-input class="input" formControlName="password" type="text" placeholder="Your Placeholder" style="height: 50px;"></ion-input>
+        <ion-input class="input" formControlName="password" type="password" placeholder="Enter Password" style="height: 50px;"></ion-input>
       </ion-item>
     </ion-list>
     <div class="btn">

@@ -38,6 +38,7 @@
 
             .grid {
                 .row {
+                  
                     .day-date {
                         border: 1px solid var(--input-border);
                         border-radius: 8px;
@@ -59,9 +60,16 @@
                             @include f-19;
                         }
                     }
+
+                  
                   
                 }
             }
+        }
+
+        .selected-item{
+            border: 1px solid var(--blue);
+            color: var(--blue);
         }
 
         .time-section {

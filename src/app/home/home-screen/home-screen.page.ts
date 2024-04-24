@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocationService } from '../location/location.service';
 
 @Component({
   selector: 'app-home-screen',
@@ -8,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HomeScreenPage implements OnInit {
 
-  constructor(private router: Router) { }
-
+  constructor(private router: Router, private locationSer:LocationService) { }
+  location:any;
   chips = [
     {
       end: '/assets/icon/down-arrow.svg',
@@ -73,6 +74,10 @@ export class HomeScreenPage implements OnInit {
   ]
   ngOnInit() {
     console.log('home-screen');
+    this.locationSer.locationName.subscribe(name => {
+      this.location = name;
+      console.log(name);
+    })
   }
 
   onNavigate(){
