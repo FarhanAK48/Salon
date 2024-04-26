@@ -1,12 +1,12 @@
 
 
-<ion-content class="content" >
+<div class="content" >
   <div class="basic">
     <ion-item class=" item" lines="none">
       <ion-img src="/assets/icon/mappin.svg"></ion-img>
       <div id="open-modal" class="title">Munich Center</div>
       <ion-img src="/assets/icon/down-arrow.svg"></ion-img>
-      <ion-img slot="end" src="/assets/icon/cross.svg"></ion-img>      
+      <ion-img slot="end" (click)="closeModal()" src="/assets/icon/cross.svg"></ion-img>      
     </ion-item>
 
     <ion-item class="item " lines="none">
@@ -39,4 +39,4 @@
     </ng-container>
    
   </div>
-</ion-content>
+</div>

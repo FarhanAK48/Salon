@@ -103,7 +103,7 @@ const routes: Routes = [
   },
   {
     path: 'search-services',
-    loadChildren: () => import('./home/search-services/search-services.module').then( m => m.SearchServicesPageModule)
+    loadChildren: () => import('./shared/search-services/search-services.module').then( m => m.SearchServicesPageModule)
   },
   {
     path: 'home-sort',

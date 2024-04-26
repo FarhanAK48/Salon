@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-search-services',
   templateUrl: './search-services.page.html',
   styleUrls: ['./search-services.page.scss'],
 })
-export class SearchServicesPage implements OnInit {
+export class SearchServicesPage  {
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
 types = [
   {
     id:1,
@@ -41,7 +42,11 @@ resultList = [
     address: 'Ranchview'
   },
 ]
-  ngOnInit() {
-  }
+
+
+async closeModal() {
+  await this.modalController.dismiss();
+}
+
 
 }

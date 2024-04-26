@@ -6,7 +6,7 @@
 
 .body{
     color: #1C1C28 !important;
-
+    --overflow: scroll;
     .ionic-item{
         .label{
             margin-top: 50px;
@@ -25,7 +25,6 @@
                  }
             }
         }
-
     }
 
     .form {
@@ -41,7 +40,8 @@
                border: 1px solid var(--input-border);
                border-radius: 10px !important;
                --height: 50px !important;
-               --padding-start: 5px;
+               --padding-start: 8px;
+               --padding-end: 8px;
                --padding-top: 15px;
                --padding-bottom: 15px;
            }
@@ -75,6 +75,7 @@
         width: 100%;
         height: auto;
 
+
         .ionic-col{
             display: flex;
             justify-content: center;
@@ -89,6 +90,10 @@
             .div-text {
                 font-size: 13px;
             }
+        }
+        .col-2{
+            -webkit-padding-start: 0px;
+            -webkit-padding-end: 0px;
         }
     }
 

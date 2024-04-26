@@ -2,6 +2,10 @@
 
 <ion-content class="content" [fullscreen]="true">
 <div class="body">  
+  <div class="back-icon">
+    <ion-img routerLink="/home-screen" class="icon" src="/assets/icon/back-arrow-black.svg"></ion-img>
+   
+  </div>
     <div class="header">
       <ion-avatar slot="start" class="profile">
         <ion-img class="img" src="/assets/images/pro-img.jpg"></ion-img>
@@ -23,7 +27,7 @@
     </div> 
 
     <ng-container *ngFor="let item of list">    
-      <ion-item [attr.id]="item.id === 7 ? 'open-modal' : null" class="item list" lines="none" (click)=" onNavigate(item)">
+      <ion-item [attr.id]="item.id === 7 ? 'logout-modal' : null" class="item list" lines="none" (click)=" onNavigate(item)">
         <div slot="start" class="left-section">
           <ion-img class="icon" [src]="item.icon"></ion-img>
           <div class="title-section">
@@ -38,7 +42,7 @@
 
 </div>
 
-<ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0,0.25, 0.5,0.75, 1]">
+<ion-modal class="modal" trigger="logout-modal" [initialBreakpoint]="0.25" [breakpoints]="[0,0.25, 0.5,0.75, 1]" [backdropDismiss]="false">
   <ng-template>
    <app-logout-confirmation></app-logout-confirmation>
   </ng-template>

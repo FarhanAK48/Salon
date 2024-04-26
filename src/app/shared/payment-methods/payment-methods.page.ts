@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 interface Payment {
   id: number,
   img?: string,
@@ -13,7 +14,7 @@ interface Payment {
 export class PaymentMethodsPage implements OnInit {
 @Input() type!:any;
 @Input() modelId:any;
-  constructor() { }
+  constructor(private router:Router) { }
 
   paymentMethods: Payment[] = [
     {
@@ -40,6 +41,10 @@ export class PaymentMethodsPage implements OnInit {
 
   ngOnInit() {
     console.log('payment-methods', this.type);
+  }
+
+  onNavigate(){
+    this.router.navigate(['/booking'])
   }
 
 }

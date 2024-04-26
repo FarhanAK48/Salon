@@ -4,6 +4,13 @@ interface Times {
   time: string,
 
 }
+
+interface SerDate {
+  id: number,
+  day: string,
+  date: string
+}
+
 @Component({
   selector: 'app-checkout-appointment',
   templateUrl: './checkout-appointment.page.html',
@@ -14,7 +21,7 @@ export class CheckoutAppointmentPage implements OnInit {
   constructor() { }
   selectedItem: any;
   selectedTime: any;
-  serviceDate = [
+  serviceDate:SerDate[] = [
     {
       id: 1,
       day: 'Sat',

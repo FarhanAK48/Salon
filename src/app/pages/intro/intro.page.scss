@@ -23,7 +23,7 @@
 
     .intro-text {
         position: absolute;
-        top: 469px;
+        top: 50%;
         margin: 0px 20px;
         // margin-right: 15px;
         .text {
@@ -35,7 +35,7 @@
 
     .btns {
         position: absolute;
-        top: 710px;        
+        top: 80%;        
         width: 100%;
         display: flex !important;
         justify-content: space-between !important;

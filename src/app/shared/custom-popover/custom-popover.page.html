@@ -1,13 +1,16 @@
-
-
 <ion-content class="content">
   <div class="body">
-    <div class="popup-header">
+    <!-- <div class="popup-header">
       <p class="title">Recomended</p>
       <p class="quantity">5</p>
-    </div>
-    <div class="pop-detail" *ngFor="let item of itemArr">
-      <p class="item-name">{{item.name}}</p>
+    </div> -->
+    <div class="pop-detail" *ngFor="let item of itemArr" (click)="selectItem(item)" [ngClass]="{'selected': selectedItem === item.id}">
+      <div class="title-section">
+        <div class="dot-size">
+          <div *ngIf="selectedItem === item.id" class="dot"></div>
+        </div>
+        <p class="item-name">{{item.name}}</p>
+      </div>
       <p class="item-val">{{item.value}}</p>
     </div>
 

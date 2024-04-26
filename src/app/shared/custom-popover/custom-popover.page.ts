@@ -8,23 +8,29 @@ import { Component, OnInit } from '@angular/core';
 export class CustomPopoverPage implements OnInit {
 
   constructor() { }
+  selectedItem:any;
   itemArr = [
     {
       id:1,
-      name: 'massage',
+      name: 'Recomended',
       value: 5
     },
     {
       id:2,
+      name: 'massage',
+      value: 5
+    },
+    {
+      id:3,
       name: 'Hair care',
       value: 7
     }, {
-      id:3,
+      id:4,
       name: 'Barber',
       value: 15
     },
     {
-      id:4,
+      id:5,
       name: 'Facial',
       value: 12
     },
@@ -33,6 +39,10 @@ export class CustomPopoverPage implements OnInit {
 
   ngOnInit() {
     console.log('popover');
+  }
+
+  selectItem(item:any){
+    this.selectedItem = item.id;
   }
 
 }

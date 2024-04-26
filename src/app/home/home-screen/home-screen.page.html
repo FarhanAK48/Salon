@@ -30,7 +30,7 @@
       <ion-grid class="grid">
         <ion-row class="row">
           <ng-container *ngFor="let item of services">
-            <ion-col class="col" size="4">
+            <ion-col class="col" size="4" routerLink="/haircut">
               <ion-img [src]="item.image"></ion-img>
               <p class="label">{{item.label}}</p>
             </ion-col>
@@ -131,7 +131,7 @@
     </div>
   </div>
 
-  <ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.75" [breakpoints]="[0,0.25, 0.5,0.75, 1]">
+  <ion-modal class="modal" trigger="open-modal" [initialBreakpoint]="0.75" [breakpoints]="[0,0.25, 0.5,0.75, 1]" [backdropDismiss]="false">
     <ng-template>
      <app-home-sort></app-home-sort>
     </ng-template>

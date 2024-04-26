@@ -10,6 +10,13 @@
             --padding-end: 0px !important;
             --inner-padding-end: 0;
         }
+        .back-icon{
+            margin-bottom: 10px;
+            .icon{
+                height: 24px;
+                width: 24px;
+            }
+        }
 
         .header{
             display: flex;

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
 import { HomeSearchPageRoutingModule } from './home-search-routing.module';
 
 import { HomeSearchPage } from './home-search.page';
+import { SearchServicesPageModule } from '../../shared/search-services/search-services.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,8 @@ import { HomeSearchPage } from './home-search.page';
     FormsModule,
     IonicModule,
     HomeSearchPageRoutingModule,
+    SearchServicesPageModule,
+    ReactiveFormsModule
    
   ],
   declarations: [HomeSearchPage]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-sort',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-sort.page.scss'],
 })
 export class HomeSortPage implements OnInit {
-  constructor() { }
+  constructor(private modalController: ModalController) {  }
+
   selectedOption: string = 'Sort';
   selectedSort:string = '';
   selectedGender:string = '';
@@ -74,5 +76,9 @@ export class HomeSortPage implements OnInit {
 
   genderSelect(item:any){
     this.selectedGender = item.title;
+  }
+
+  closeModel(){
+    this.modalController.dismiss()
   }
 }

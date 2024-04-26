@@ -8,7 +8,7 @@ import { CustomPopoverPage } from '../custom-popover/custom-popover.page';
   styleUrls: ['./category-tabs.page.scss'],
 })
 export class CategoryTabsPage implements OnInit {
-
+   show = true;
   constructor(private popoverController: PopoverController) { }
   chips = [
     {
@@ -35,11 +35,18 @@ export class CategoryTabsPage implements OnInit {
   ngOnInit() {
     console.log('tabs')
   }
-  async presentPopover(ev: any) {
+  async presentPopover(ev: any) { 
+  
     const popover = await this.popoverController.create({
       component: CustomPopoverPage,
       event: ev,
       translucent: true
+    });   
+ 
+    this.show = false;
+
+    popover.onDidDismiss().then(() => {
+      this.show = true;
     });
     return await popover.present();
   }

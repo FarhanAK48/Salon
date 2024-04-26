@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { OtpVerifyPageRoutingModule } from './otp-verify-routing.module';
 
 import { OtpVerifyPage } from './otp-verify.page';
+import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { OtpVerifyPage } from './otp-verify.page';
     IonicModule,
     OtpVerifyPageRoutingModule,
     ReactiveFormsModule,
+    NgxOtpInputModule
   ],
   declarations: [OtpVerifyPage]
 })

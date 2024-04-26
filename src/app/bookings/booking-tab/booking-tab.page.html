@@ -38,8 +38,8 @@
 </ion-content> -->
 <ion-content class="content">
 
-  <div  class="booking"> Your Bookings</div>
- 
+  <div class="booking"> Your Bookings</div>
+
   <ion-segment class="segment" [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)">
     <ion-segment-button value="past">
       <ion-label>Past</ion-label>
@@ -52,9 +52,6 @@
     </ion-segment-button>
   </ion-segment>
 
-  <!-- <ng-container *ngIf="selectedSegment==='past'"> -->
-    <app-past [type]="selectedSegment"></app-past>
-  <!-- </ng-container> -->
+  <app-past [type]="selectedSegment"></app-past>
+
 </ion-content>
-
-

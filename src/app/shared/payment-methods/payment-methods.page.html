@@ -7,7 +7,7 @@
           <p class="title"> Select Payment Method</p>
         </ion-item>
         <div *ngIf="type !== 'checkout'" class="item-header">
-          <ion-img routerLink="/booking" class="img" src="../../../assets/icon/cross.svg"></ion-img>
+          <ion-img (click)="onNavigate()" class="img" src="../../../assets/icon/cross.svg"></ion-img>
           <p class="title"> Payment Methods</p>
         </div>
         <hr class="custom-line">

@@ -166,13 +166,7 @@
         .grid{
             -webkit-padding-start: 0px;
             -webkit-padding-end: 0px;
-
-            .col-1{
-                -webkit-padding-start: 0px;
-            }
-            .col-3{
-                -webkit-padding-end: 0px;
-            }
+         
             .text{
                 @include f-13;
                 margin: 5px 0px;

@@ -1,6 +1,6 @@
 
 
-<ion-content class="body">
+<ion-content class="body" [scrollEvents]="true">
 <ion-item class="ionic-item" lines="none">
   <ion-label class="label">    
     <h2 class="title"> Welcome Back!</h2>
@@ -15,7 +15,7 @@
     </ion-item>
     <ion-item lines="none" class="items">
       <ion-label class="label" position="stacked">Password</ion-label>
-      <ion-input class="input" formControlName="password" type="password" placeholder="Enter Password"></ion-input>
+      <ion-input class="input" formControlName="password" type="password" (ionFocus)="onPasswordFieldFocus($event)" placeholder="Enter Password"></ion-input>
     </ion-item>
   </ion-list>
   <div class="btn">
@@ -30,13 +30,13 @@
 <div class="divider">
   <ion-grid>
     <ion-row>
-      <ion-col class="ionic-col">
+      <ion-col class="ionic-col" size="3">
         <span class="span1"></span>
       </ion-col>
-      <ion-col class="ionic-col">
-        <div class="div-text">Or SignUp using</div>
+      <ion-col class="ionic-col col-2" size="6">
+        <div class="div-text">Or Login using</div>
       </ion-col>
-      <ion-col class="ionic-col">
+      <ion-col class="ionic-col" size="3">
         <span class="span1"></span>
       </ion-col >
     </ion-row>

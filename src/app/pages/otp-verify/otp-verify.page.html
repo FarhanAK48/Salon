@@ -3,23 +3,20 @@
 <ion-content class="body">
   <ion-item class="item-header" lines="none">
    <ion-label class="ionic-label">
-     <ion-icon class="icon" name="arrow-back"></ion-icon>
+     <ion-icon routerLink="/otp" class="icon" name="arrow-back"></ion-icon>
      <h2 class="title">Verify OTP</h2>
    </ion-label>
   </ion-item>
-  <form class="form" [formGroup]="otpVerifyForm">
-   <!-- <ion-item lines="none" class="ionic-item"> -->
+  <div class="form" >
     <div class="otp-fields">
-      <ion-input class="input" formControlName="a" maxlength="1" type="number" placeholder="0"></ion-input>
-      <ion-input class="input" formControlName="b" maxlength="1" type="number" placeholder="0"></ion-input>
-      <ion-input class="input" formControlName="c" maxlength="1" type="number" placeholder="0"></ion-input>
-      <ion-input class="input" formControlName="d" maxlength="1" type="number" placeholder="0"></ion-input>
+      <ngx-otp-input class="input" [config]="otpInputConfig" (otpChange)="otpvalues($event)"></ngx-otp-input>
+
     </div>
     <p class="code-confirmation">Didn't Receive the Code? <a class="resend">Resend</a></p>
-   <!-- </ion-item> -->
+
    <div class="btn">
-     <ion-button routerLink="/login" [disabled]="otpVerifyForm.invalid">Verify OTP</ion-button>
+     <ion-button  [disabled]="!isValidOTP" routerLink="/login" >Verify OTP</ion-button>
    </div>
-  </form>
+  </div>
  </ion-content>
  

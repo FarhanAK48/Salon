@@ -35,8 +35,7 @@ export class LocationPage implements OnInit {
     console.log('LNG**', place.geometry?.location?.lng())
 
     this.center = {lat: place.geometry?.location?.lat(), lng: place.geometry?.location?.lng()}
-    // this.center = { lat: place?.geometry?.location?.lat(), lng: place?.geometry?.location?.lng() };
-    // this.initMap();
+
     console.log('Center', this.center)
   }
 

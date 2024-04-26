@@ -4,38 +4,39 @@
     font-size: 15px;
     line-height: 22.5px;
 }
-.content{
-    .body{
+.content {
+    .body {
         padding: 5px 15px !important;
-      
-        .popup-header {
-            display: flex;
-            justify-content: space-between;
-            color: var(--blue);
-            // margin: 10px 5px !important;
-    
-    
-            .title {
-                @include f-15;
-                font-weight: bold;
-            }
-            .quantity {
-                @include f-15;
-                font-weight: bold;
-            }
-        }
-    
         .pop-detail {
             display: flex;
             justify-content: space-between;
-    
-            .item-name {
-                @include f-15;
+          
+
+            .title-section {
+                display: flex;
+                align-items: center;
+
+                .dot-size {
+                    height: 4px;
+                    width: 4px;
+                    margin-right: 5px;
+                    .dot {
+                        height: 4px;
+                        width: 4px;
+                        border-radius: 50%;
+                        background-color: var(--blue);
+                    }
+                }
+                .item-name {
+                    @include f-15;
+                }
             }
-            .item-val{
+            .item-val {
                 @include f-15;
             }
         }
-
+        .selected {
+            color: var(--blue) !important;
+        }
     }
 }

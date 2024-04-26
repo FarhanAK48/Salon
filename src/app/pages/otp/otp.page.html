@@ -3,14 +3,16 @@
 <ion-content class="body">
  <ion-item class="item-header" lines="none">
   <ion-label class="label">
-    <ion-icon class="icon" name="close"></ion-icon>
+    <ion-icon routerLink="/signup" class="icon" name="close"></ion-icon>
     <h2 class="title">Enter Mobile Number</h2>
   </ion-label>
  </ion-item>
  <form class="form" [formGroup]="otpForm">
   <ion-item lines="none" class="ionic-item">
     <ion-label class="label" position="stacked">Phone Number</ion-label>
-    <ion-input class="input" formControlName="number" type="text" placeholder="Enter Number"></ion-input>
+    <ion-input class="input" formControlName="number"  placeholder="Enter Number" type="tel" (input)="formatNumber($event)">
+      <ion-img class="mb-img" src="/assets/icon/mobile-no.svg"></ion-img>
+    </ion-input>
   </ion-item>
   <div class="btn">
     <ion-button [disabled]="otpForm.invalid" routerLink="/otp-verify">Send OTP</ion-button>

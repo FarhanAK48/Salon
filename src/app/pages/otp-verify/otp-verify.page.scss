@@ -26,19 +26,23 @@
     }
 
     .form {
-        margin-top: 20px !important;
+        // margin-top: 20px !important;
 
         .otp-fields {
             display: flex;
             @include padding;
-            .input {
+            ::ng-deep .ngx-otp-input{
                 border: 1px solid var(--input-border);
                 border-radius: 10px !important;
-                --height: 50px !important;
-                padding: 2px 18px !important;
+                height: 50px !important;
+                padding: 8px 12px !important;
                 margin-right: 10px;
                 width: 50px;
                 font-size: 15px !important;
+            }
+            .input {
+                margin-left: 5px;
+           
             }
         }
         .code-confirmation {
@@ -48,6 +52,7 @@
 
             .resend {
                 color: var(--blue);
+                text-decoration: underline;
             }
         }
         .btn {
@@ -60,6 +65,27 @@
             ion-button {
                 width: 100%;
                 --background: var(--blue);
+            }
+        }
+    }
+
+    .fom{
+        ::ng-deep .ngx-otp-input{
+            border: 1px solid var(--input-border);
+            border-radius: 10px !important;
+            --height: 50px !important;
+            padding: 2px 18px !important;
+            margin-right: 10px;
+            width: 50px;
+            font-size: 15px !important;
+        }
+        .inputs{
+            display: flex;
+
+            .input{
+                margin-left: 5px;
+                // border: 1px solid var(--input-border);
+
             }
         }
     }

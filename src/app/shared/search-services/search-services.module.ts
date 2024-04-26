@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SearchServicesPageRoutingModule } from './search-services-routing.module';
 
 import { SearchServicesPage } from './search-services.page';
 
@@ -13,8 +12,9 @@ import { SearchServicesPage } from './search-services.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchServicesPageRoutingModule
+
   ],
-  declarations: [SearchServicesPage]
+  declarations: [SearchServicesPage],
+  exports: [SearchServicesPage]
 })
 export class SearchServicesPageModule {}

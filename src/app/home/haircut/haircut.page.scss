@@ -34,14 +34,14 @@
             }
             .text {
                 margin: 0px 10px;
-                color: white;
+                color: var(--white);
             }
         }
 
         .title{
             position: absolute;
             left: 16px;
-            top: 50%;
+            top: 60%;
             transform: translateY(-50%);
             color: var(--white);
             font-size: 46px;

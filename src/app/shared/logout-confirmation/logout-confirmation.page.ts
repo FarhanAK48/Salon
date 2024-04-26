@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-logout-confirmation',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutConfirmationPage implements OnInit {
 
-  constructor() { }
+  constructor(private modelControl:ModalController) { }
 
   ngOnInit() {
     console.log('logout confirmation')
+  }
+
+  close(){
+    this.modelControl.dismiss();
   }
 
 }

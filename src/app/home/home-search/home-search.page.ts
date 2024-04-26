@@ -1,13 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { SearchServicesPage } from '../../shared/search-services/search-services.page';
+
 
 @Component({
   selector: 'app-home-search',
   templateUrl: './home-search.page.html',
   styleUrls: ['./home-search.page.scss'],
 })
-export class HomeSearchPage implements OnInit {
+export class HomeSearchPage  {
+  // myForm!:FormGroup;
+  inputValue:any;
+ 
+  constructor(private modalController: ModalController) {  }
 
-  constructor() { }
+
 
   searches = [
     {
@@ -47,8 +54,25 @@ export class HomeSearchPage implements OnInit {
 
  ]
 
-  ngOnInit() {
-    
+
+
+  onInputValueChange(newValue: string) {
+    console.log('Input value changed:', newValue);
+    console.log('input val', this.inputValue)  
+      if (this.inputValue.trim() !== '') {
+        this.openModal(); 
+      }  
+  }
+
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: SearchServicesPage,
+      backdropDismiss: false,      
+    });
+    await modal.present();
   }
 
 }
+
+

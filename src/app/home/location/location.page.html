@@ -15,8 +15,14 @@
         <ion-col size="10" class="col-1 col">
           <ion-item lines="none" class="item items">
             <ion-label class="label" position="stacked">Enter your Address</ion-label>
-            <input class="input" type="text" placeholder="Your Name" #placesRef="ngx-places" ngx-gp-autocomplete
-              (onAddressChange)="handleAddressChange($event)">
+            <div class="input-section">
+              <input class="input" type="text" placeholder="Your Name" #placesRef="ngx-places" ngx-gp-autocomplete
+                (onAddressChange)="handleAddressChange($event)">
+                <div class="search-icon">
+                  <ion-img src="/assets/icon/search.svg"></ion-img>
+                </div>
+            </div>
+         
           </ion-item>
         </ion-col>
         <ion-col size="2" class="ion-text-center col col-2 ion-align-self-end">
@@ -26,12 +32,17 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+    <div class="map-section">
 
-    <div class="g-map">
-      <google-map #map [center]="center" [zoom]="zoom">
-        <map-marker [position]="center"></map-marker>
-        <map-circle [center]="center" [radius]="radius" />
-      </google-map>
+      <div class="g-map">
+        <google-map #map [center]="center" [zoom]="zoom">
+          <map-marker [position]="center"></map-marker>
+          <map-circle [center]="center" [radius]="radius" />
+        </google-map>
+      </div>
+      <ion-button class="loc-btn" aria-label="Favorite">
+       <ion-img src="/assets/icon/path-location.svg"></ion-img>
+      </ion-button>
     </div>
 
     <ion-item lines="none" class="header">
@@ -41,6 +52,7 @@
     </ion-item>
     <p class="address">3891  Ranchview, Dr. Richardson, California 62639</p>
   </div>
+
 </ion-content>
 
 <ion-footer class="footer">
