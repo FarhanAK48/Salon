@@ -11,9 +11,14 @@ export class MenShopPage implements OnInit {
 
   constructor() { }
   men:any=false;
- 
+ selectedTab!:any;
   ngOnInit() {
     console.log('men-salon');
+  }
+
+  selectTab(item:any){
+    console.log('C to P',item)
+    this.selectedTab = item;
   }
 
 

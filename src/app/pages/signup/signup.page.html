@@ -52,12 +52,12 @@
           <ion-img class="img" src="assets/icon/twitter.png" alt=""></ion-img>
           <div class="logo-text">Twitter</div>
         </ion-col>
-        <ion-col class="col">
+        <ion-col class="col"  (click)="signInWithGoogle()">
           <ion-img class="img" src="assets/icon/google.png" alt=""></ion-img>
           <div class="logo-text">Google</div>
 
         </ion-col>
-        <ion-col class="col">
+        <ion-col class="col" (click)="signOut()">
           <ion-img class="img" src="assets/icon/fb.png" alt=""></ion-img>
           <div class="logo-text">Facebook</div>
 

@@ -1,8 +1,8 @@
 <div class="cart-button" routerLink="/checkout">
   <div class="left-side">
-    <div class="total-items"> 2</div>
+    <div class="total-items">{{btnData?.totalItem}}</div>
     <div class="amount">
-      <p class="total-amount">$345</p>
+      <p class="total-amount">${{btnData?.totalPrice}}</p>
       <p class="taxes">Plus texes</p>
     </div>
   </div>

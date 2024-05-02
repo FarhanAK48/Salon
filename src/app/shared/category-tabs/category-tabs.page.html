@@ -3,7 +3,7 @@
 <div class="content">
   <div class="chips-block">
     <ng-container *ngFor="let item of chips">
-      <div class="chips">
+      <div [ngClass]="{'active-tab': selectedItem === item.id}" class="chips"  (click)="selectTab(item)">
         <p class="text">{{item.name}}</p>
       </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { CustomPopoverPage } from '../custom-popover/custom-popover.page';
 
@@ -9,6 +9,10 @@ import { CustomPopoverPage } from '../custom-popover/custom-popover.page';
 })
 export class CategoryTabsPage implements OnInit {
    show = true;
+   selectedItem:any;
+   propertyName:any;
+
+   @Output() value = new EventEmitter<any>();
   constructor(private popoverController: PopoverController) { }
   chips = [
     {
@@ -20,15 +24,15 @@ export class CategoryTabsPage implements OnInit {
       name: "Packages",
     },
     {
-      id:1,
+      id:3,
       name: "Face care",
     },
     {
-      id:1,
+      id:4,
       name: "Face trim",
     },
     {
-      id:1,
+      id:5,
       name: "Face care",
     },
   ]
@@ -49,5 +53,12 @@ export class CategoryTabsPage implements OnInit {
       this.show = true;
     });
     return await popover.present();
+  }
+
+  selectTab(item:any){
+    this.selectedItem = item.id;
+    this.propertyName = item.name;
+    this.value.emit(item.name)
+    console.log('item', this.selectedItem)
   }
 }

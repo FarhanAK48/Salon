@@ -105,10 +105,10 @@
     <ion-icon class="menu" name="share"></ion-icon>
   </div> -->
   <div>
-    <app-category-tabs></app-category-tabs>
+    <app-category-tabs (value)="selectTab($event)"></app-category-tabs>
   </div>
   <div>
-    <app-salon-offers></app-salon-offers>
+    <app-salon-offers [tabVal]="selectedTab"></app-salon-offers>
   </div>
 
 

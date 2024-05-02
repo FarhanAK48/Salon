@@ -26,6 +26,10 @@
                 font-weight: bold;
             }
         }
+        .active-tab{
+            color: var(--blue);
+            border: 1px solid var(--blue);
+        }
         .menu-btn {
             position: fixed;
             // top: 120px;

@@ -1,8 +1,8 @@
 <div class="content">
-  <div class="recomend">
-    <h3 class="heading">Recommended(5)</h3>
-    <ng-container *ngFor="let item of recList; let i=index">
-      <div class="rec-list">
+  <div class="recomend" *ngFor="let key of orderKeys ">
+    <h3 *ngIf="data[key]?.length" class="heading">{{key}}({{data[key]?.length}})</h3>
+    <ng-container *ngFor="let item of data[key]; let i=index" >
+      <div class="rec-list" (click)="getItem(item)">
         <div class="left-side">
           <div class="image">
             <img class="img" src="{{item.img}}" alt="">
@@ -28,37 +28,69 @@
 
   </div>
 
-
-  <div class="packages">
-    <h3 class="heading">Packages</h3>
-    <ng-container *ngFor="let item of packageList; let i=index">
-      <div class="rec-list">
-        <div class="left-side">
-          <div class="image">
-            <img class="img" src="{{item.img}}" alt="">
-          </div>
-          <ion-label class="label">
-            <h1 class="h-text">{{item.title}}</h1>
-            <p class="text">${{item.price}}</p>
-            <div class="time">
-              <ion-icon class="time-icon" name="time-outline"></ion-icon>
-              <p class="minute">{{item.time}} Mins</p>
+    <!-- <div class="recomend">
+      <h3 class="heading">Recommended(5)</h3>
+      <ng-container *ngFor="let item of recList; let i=index">
+        <div class="rec-list">
+          <div class="left-side">
+            <div class="image">
+              <img class="img" src="{{item.img}}" alt="">
             </div>
-          </ion-label>
+            <ion-label class="label">
+              <h1 class="h-text">{{item.title}}</h1>
+              <p class="text">${{item.price}}</p>
+              <div class="time">
+  
+                <ion-icon class="time-icon" name="time-outline"></ion-icon>
+                <p class="minute">{{item.time}} Mins</p>
+              </div>
+            </ion-label>
+          </div>
+          <div class="right-side">
+            <p class="select-btn">Select </p>
+            <ion-icon class="add-icon" name="add"></ion-icon>
+          </div>
         </div>
-        <div class="right-side">
-          <p class="select-btn">Select </p>
-          <ion-icon class="add-icon" name="add"></ion-icon>
+        <hr *ngIf="i < recList.length - 1" class="custom-hr">
+  
+      </ng-container>
+  
+    </div>
+  
+  
+    <div class="packages">
+      <h3 class="heading">Packages</h3>
+      <ng-container *ngFor="let item of packageList; let i=index">
+        <div class="rec-list">
+          <div class="left-side">
+            <div class="image">
+              <img class="img" src="{{item.img}}" alt="">
+            </div>
+            <ion-label class="label">
+              <h1 class="h-text">{{item.title}}</h1>
+              <p class="text">${{item.price}}</p>
+              <div class="time">
+                <ion-icon class="time-icon" name="time-outline"></ion-icon>
+                <p class="minute">{{item.time}} Mins</p>
+              </div>
+            </ion-label>
+          </div>
+          <div class="right-side">
+            <p class="select-btn">Select </p>
+            <ion-icon class="add-icon" name="add"></ion-icon>
+          </div>
         </div>
-      </div>
-      <hr *ngIf="i < packageList.length - 1" class="custom-hr">
+        <hr *ngIf="i < packageList.length - 1" class="custom-hr">
+  
+      </ng-container>
+  
+    </div> -->
 
-    </ng-container>
 
-  </div>
+
 
   <div class="cart-button" routerLink="/checkout">
-    <app-cart-button ></app-cart-button>
+    <app-cart-button [btnData]="itemsObject"></app-cart-button>
     <!-- <div class="left-side">
       <div class="total-items"> 2</div>
       <div class="amount">
